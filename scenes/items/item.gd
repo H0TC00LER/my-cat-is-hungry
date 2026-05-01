@@ -9,3 +9,7 @@ func interact(player: Player) -> void:
 func disable() -> void:
 	$CollisionShape3D.disabled = true
 	freeze = true
+	
+func activate() -> void:
+	$CollisionShape3D.disabled = false
+	freeze = false

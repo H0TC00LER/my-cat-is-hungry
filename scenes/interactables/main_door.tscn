@@ -1,0 +1,112 @@
+[gd_scene format=4 uid="uid://binbub6jotmf4"]
+
+[ext_resource type="PackedScene" uid="uid://cd58ry4bp5g4m" path="res://scenes/interactables/door.tscn" id="1_wv63g"]
+[ext_resource type="Texture2D" uid="uid://12qtshxg2mkq" path="res://assets/props/door/door_tex_door.png" id="2_rfet2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rfet2"]
+size = Vector3(0.20136718, 2.6371338, 0.19329834)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ppo41"]
+resource_name = "tex_door_frame"
+cull_mode = 2
+albedo_texture = ExtResource("2_rfet2")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_m08ef"]
+_surfaces = [{
+"aabb": AABB(-0.8, -1.5, -0.099999994, 1.6, 2.6408038, 0.19999999),
+"format": 34359742465,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgADAAQAAQAFAAMABAADAAUABgACAAQABgAAAAIABAAFAAcABgAEAAcABwAFAAgABwAIAAYAAQAIAAUACQAIAAEAAAAJAAEABgAIAAoACQAKAAgAAAAGAAsABgAKAAsADAAJAAAACwAKAA0ADgAKAAkADAAOAAkADgANAAoAAAAPAAwADwAOAAwAAAALAA8ADwANAA4ACwANAA8A"),
+"name": "tex_door_frame",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("mpkZv4TYcD/MzMw9mpkZP4TYcD/MzMy9mpkZP4TYcD/MzMw9mpkZPwAAwL/MzMy9mpkZPwAAwL/MzMw9zcxMPwAAwL/MzMy9zcxMP9wFkj/MzMw9zcxMPwAAwL/MzMw9zcxMP9wFkj/MzMy9mpkZv4TYcD/MzMy9zcxMv9wFkj/MzMy9zcxMv9wFkj/MzMw9mpkZvwAAwL/MzMw9zcxMvwAAwL/MzMy9mpkZvwAAwL/MzMy9zcxMvwAAwL/MzMw9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_oljlu"]
+resource_name = "door_Cube_007"
+lightmap_size_hint = Vector2i(26, 30)
+_surfaces = [{
+"aabb": AABB(-0.8, -1.5, -0.099999994, 1.6, 2.6408038, 0.19999999),
+"attribute_data": PackedByteArray("4iaDPVCdSD2xE7s+vLt7P6zjaT9QnUg92YmdPDMzcz+s42k/UJ1IPdmJnTy8u3s/4iaDPVCdSD2xE7s+MzNzP/zwfT9ooIA/2YmdPJqZWT/88H0/AIDlucVOLD8REVE//PB9PwCA5bnFTiw/mplZP/zwfT9ooIA/2YmdPBERUT/QHGq8aKCAP0/sBD+8u3s/4iaDPWiggD9iJ/Y+MzNzP+Imgz1ooIA/T+wEPzMzcz/QHGq8aKCAP2In9j68u3s/4iaDPWiggD/FTiw/7+6OPtAcarwAgOW52YmdPCIioj7iJoM9UJ1IPYnMjD3v7o4+0BxqvGiggD/FTiw/IiKiPvzwfT8AgOW52YmdPImIiDys42k/UJ1IPYnMjD3e3V09/PB9P2iggD/FTiw/iYiIPKzjaT9ooIA/xU4sP97dXT2s42k/UJ1IPbETez+8u3s/rONpP2iggD8UO3E/zcwMP6zjaT9ooIA/sRN7P83MDD+s42k/UJ1IPRQ7cT+8u3s/rONpP2iggD/FTiw/vLt7P/zwfT9ooIA/J3YiPzMzcz/88H0/aKCAP8VOLD8zM3M/rONpP2iggD8ndiI/vLt7P/zwfT8AgOW5O7FTP7y7ez/QHGq8AIDluZ7YST/v7i4/0BxqvACA5bk7sVM/7+4uP/zwfT8AgOW5nthJP7y7ez/QHGq8AIDluTuxUz+JiIg80BxqvGiggD+e2Ek/VVUVP9AcarxooIA/O7FTP1VVFT/QHGq8AIDluZ7YST+JiIg84iaDPWiggD+xE3s/ZmbmPuImgz1QnUg9FDtxP4mIiDziJoM9UJ1IPbETez+JiIg84iaDPWiggD8UO3E/ZmbmPuImgz1QnUg9h8yMPYmI6D7QHGq8aKCAP8VOLD9VVdU+4iaDPWiggD/FTiw/iYjoPtAcarwAgOW52YmdPFVV1T788H0/AIDludmJnTx3dzc/rONpP1CdSD2HzIw93t0tP6zjaT9ooIA/xU4sP97dLT/88H0/aKCAP8VOLD93dzc/"),
+"format": 34359742519,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0ADgANABAADgAQABEAEQAQABIAEQASABMAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkAKAAsACsALAAoAC0ALAAtAC4ALAAuAC8A"),
+"material": SubResource("StandardMaterial3D_ppo41"),
+"name": "tex_door_frame",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("mpkZv4TYcD/MzMw9mpkZP4TYcD/MzMy9mpkZP4TYcD/MzMw9mpkZv4TYcD/MzMy9zcxMPwAAwL/MzMw9zcxMP9wFkj/MzMy9zcxMP9wFkj/MzMw9zcxMPwAAwL/MzMy9zcxMvwAAwL/MzMw9mpkZvwAAwL/MzMy9mpkZvwAAwL/MzMw9zcxMvwAAwL/MzMy9mpkZvwAAwL/MzMy9zcxMv9wFkj/MzMy9mpkZv4TYcD/MzMy9zcxMvwAAwL/MzMy9zcxMP9wFkj/MzMy9mpkZP4TYcD/MzMy9zcxMPwAAwL/MzMy9mpkZPwAAwL/MzMy9mpkZP4TYcD/MzMw9mpkZPwAAwL/MzMy9mpkZPwAAwL/MzMw9mpkZP4TYcD/MzMy9mpkZPwAAwL/MzMw9zcxMPwAAwL/MzMy9zcxMPwAAwL/MzMw9mpkZPwAAwL/MzMy9zcxMP9wFkj/MzMw9zcxMv9wFkj/MzMy9zcxMv9wFkj/MzMw9zcxMP9wFkj/MzMy9zcxMv9wFkj/MzMw9zcxMvwAAwL/MzMy9zcxMvwAAwL/MzMw9zcxMv9wFkj/MzMy9mpkZvwAAwL/MzMw9mpkZv4TYcD/MzMy9mpkZv4TYcD/MzMw9mpkZvwAAwL/MzMy9mpkZv4TYcD/MzMw9zcxMvwAAwL/MzMw9mpkZvwAAwL/MzMw9zcxMv9wFkj/MzMw9zcxMP9wFkj/MzMw9mpkZP4TYcD/MzMw9mpkZPwAAwL/MzMw9zcxMPwAAwL/MzMw9/3///////7//f///////v/9///////+//3///////78AAP9/////vwAA/3////+/AAD/f////78AAP9/////v/9///////+//3///////7//f///////v/9///////+//3//f+T98b7/f/9/P+4ft/9//3+X7Eu2/3//f////7//f/9/XO1Qyf9//3/u7QfJ/3//f9L9FcH/f/9/////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////7//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+/AAD/f////78AAP9/////vwAA/3////+/AAD/f////7//////7u0HSf/////S/RZB/////////z//////XO1QSf////8/7iA3/////5fsTDb/////5P3yPv////////8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_m08ef")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yxw0t"]
+resource_name = "tex_door"
+cull_mode = 2
+albedo_texture = ExtResource("2_rfet2")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ca1jf"]
+_surfaces = [{
+"aabb": AABB(-1.7142868, -1.9841464, 0.14285696, 1.7142859, 3.4929543, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "tex_door",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AACItYL4/b8YSRI+wG3bv54gwT8YSRI+AACItZ4gwT8YSRI+wG3bv4L4/b8YSRI+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k1q0e"]
+resource_name = "door_Cube_010"
+lightmap_size_hint = Vector2i(10, 14)
+_surfaces = [{
+"aabb": AABB(-1.7142868, -1.9841464, 0.14285696, 1.7142859, 3.4929543, 1e-05),
+"attribute_data": PackedByteArray("uD1mP6EpgD/NzEw9JUkSPXTFqz1AWjI9MzNzP27bdj+4PWY/MFoyPc3MTD1u23Y/dMWrPaEpgD8zM3M/JUkSPQ=="),
+"format": 34359742519,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_yxw0t"),
+"name": "tex_door",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AACItYL4/b8YSRI+wG3bv54gwT8YSRI+AACItZ4gwT8YSRI+wG3bv4L4/b8YSRI+/3//f////7//f/9//v//v/9//3/+//+//3//f////78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ca1jf")
+
+[node name="MainDoor" unique_id=2117332238 instance=ExtResource("1_wv63g")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="0" unique_id=914219417]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1946550325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6995513, 1.3176638, 0)
+shape = SubResource("BoxShape3D_rfet2")
+
+[node name="env_door_frame" type="MeshInstance3D" parent="StaticBody3D" index="1" unique_id=1051029377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5009058, 0)
+mesh = SubResource("ArrayMesh_oljlu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=472435247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.702617, 1.3221192, -0.0039978027)
+shape = SubResource("BoxShape3D_rfet2")
+
+[node name="CollisionShape3D" parent="RigidBody3D" parent_id_path=PackedInt32Array(1520577607) index="0" unique_id=1583295663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+
+[node name="MeshInstance3D" parent="RigidBody3D" parent_id_path=PackedInt32Array(1520577607) index="1" unique_id=1807454468]
+visible = false
+
+[node name="env_door_closed" type="MeshInstance3D" parent="RigidBody3D" parent_id_path=PackedInt32Array(1520577607) index="2" unique_id=1853912984]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.39374554, 0.60000086, 1.4144919, -0.0056248307)
+mesh = SubResource("ArrayMesh_k1q0e")
+
+[node name="HingeJoint3D" parent="." index="2" unique_id=201777865]
+node_a = NodePath("../StaticBody3D")

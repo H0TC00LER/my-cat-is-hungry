@@ -20,6 +20,13 @@ script = ExtResource("2_dovo2")
 
 [node name="RayCast3D" type="RayCast3D" parent="Head" unique_id=544816252]
 target_position = Vector3(0, 0, -2.025)
+collide_with_areas = true
 
 [node name="Hand" type="Node3D" parent="Head" unique_id=234565224]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2939775, -0.15891814, -0.44799888)
+
+[node name="DebugLabel" type="Label" parent="." unique_id=901056692]
+offset_left = 25.0
+offset_top = 445.0
+offset_right = 323.0
+offset_bottom = 615.0

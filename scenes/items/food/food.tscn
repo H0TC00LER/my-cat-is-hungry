@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cti1kuw0033y3"]
+
+[ext_resource type="PackedScene" uid="uid://cnx5hmktllu3u" path="res://scenes/items/item.tscn" id="1_ymw3w"]
+[ext_resource type="Script" uid="uid://st4f4kdmyqmm" path="res://scenes/items/food/food.gd" id="2_gv0es"]
+
+[node name="Food" unique_id=725074557 instance=ExtResource("1_ymw3w")]
+script = ExtResource("2_gv0es")
+delta_radioactivity = 0
+delta_holiness = 0
+delta_esotericity = 0

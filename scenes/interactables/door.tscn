@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cd58ry4bp5g4m"]
+
+[ext_resource type="Script" uid="uid://c6cihqv3bjtod" path="res://scenes/interactables/door.gd" id="1_qq3h0"]
+[ext_resource type="Script" uid="uid://b2fkmrsy4nn2s" path="res://scenes/interactables/rigid_body_3d.gd" id="2_fnoyy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fnoyy"]
+size = Vector3(1.2, 2.5, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qq3h0"]
+size = Vector3(1, 2, 0.1)
+
+[node name="Door" type="Node3D" unique_id=2117332238]
+script = ExtResource("1_qq3h0")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1520577607]
+mass = 10.0
+script = ExtResource("2_fnoyy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1583295663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_fnoyy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=1807454468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("BoxMesh_qq3h0")
+
+[node name="HingeJoint3D" type="HingeJoint3D" parent="." unique_id=201777865]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.5130914, 0.99583244, 0)
+node_b = NodePath("../RigidBody3D")
+angular_limit/enable = true
+angular_limit/lower = 0.0
+motor/enable = true
+motor/target_velocity = -1.0471976

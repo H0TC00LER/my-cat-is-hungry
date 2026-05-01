@@ -2,6 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://8erij1hqafx3" path="res://scenes/player/player.tscn" id="1_72ix8"]
 [ext_resource type="PackedScene" uid="uid://cnx5hmktllu3u" path="res://scenes/items/item.tscn" id="2_2vj2h"]
+[ext_resource type="PackedScene" uid="uid://c0gr85osy4n3y" path="res://scenes/cat/cat.tscn" id="3_y0acb"]
+[ext_resource type="PackedScene" uid="uid://cti1kuw0033y3" path="res://scenes/items/food/food.tscn" id="4_j4d2a"]
+[ext_resource type="PackedScene" uid="uid://cd58ry4bp5g4m" path="res://scenes/interactables/door.tscn" id="5_u81e1"]
+[ext_resource type="PackedScene" uid="uid://bsgmxtpn4467s" path="res://scenes/levels/room.tscn" id="6_b6bv0"]
+[ext_resource type="PackedScene" uid="uid://b4egjckvpm0ky" path="res://assets/props/table/table.glb" id="7_vkq25"]
+[ext_resource type="PackedScene" uid="uid://dyb2d3wwrfa4t" path="res://assets/props/tv/env_tv.glb" id="8_7lrji"]
+[ext_resource type="PackedScene" uid="uid://crk1vbg0xrfji" path="res://assets/props/stove/env_stove.glb" id="9_rssyh"]
+[ext_resource type="PackedScene" uid="uid://iggwmpr2rn7q" path="res://assets/props/sink/env_sink.glb" id="10_hwp66"]
+[ext_resource type="PackedScene" uid="uid://binbub6jotmf4" path="res://scenes/interactables/main_door.tscn" id="11_hwp66"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72ix8"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -13,7 +22,10 @@ sky_material = SubResource("ProceduralSkyMaterial_72ix8")
 [sub_resource type="Environment" id="Environment_y0acb"]
 background_mode = 2
 sky = SubResource("Sky_2vj2h")
+reflected_light_source = 1
 tonemap_mode = 2
+ssao_enabled = true
+ssil_enabled = true
 glow_enabled = true
 
 [node name="Main" type="Node3D" unique_id=1488031043]
@@ -26,7 +38,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=2065585253 instance=ExtResource("1_72ix8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.1656094, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5058975, 6.1656094, 0)
 
 [node name="Item" parent="." unique_id=725074557 instance=ExtResource("2_2vj2h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7170095, 10.661426)
@@ -53,3 +65,41 @@ size = Vector3(14.07666, 4.368164, 0.91064453)
 transform = Transform3D(-0.5, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.5, -14.016662, 0.80828094, 7.2663336)
 use_collision = true
 size = Vector3(14.07666, 4.368164, 0.91064453)
+
+[node name="Cat" parent="." unique_id=155322492 instance=ExtResource("3_y0acb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.015953, -0.920846, -0.15823245)
+
+[node name="Food" parent="." unique_id=101725236 instance=ExtResource("4_j4d2a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1114974, 1.1309409, -5.383801)
+delta_radioactivity = 20
+delta_holiness = 10
+delta_esotericity = 5
+
+[node name="Food2" parent="." unique_id=1817834146 instance=ExtResource("4_j4d2a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1114974, 1.1309409, -4.397358)
+delta_radioactivity = 20
+delta_holiness = 10
+delta_esotericity = 5
+
+[node name="Door" parent="." unique_id=2117332238 instance=ExtResource("5_u81e1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7273138, 0.79898953, 0)
+
+[node name="World" type="Node3D" parent="." unique_id=2011885222]
+
+[node name="room" parent="World" unique_id=1567268691 instance=ExtResource("6_b6bv0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.608368, 0, 0)
+
+[node name="table" parent="World" unique_id=913151978 instance=ExtResource("7_vkq25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.265669, -0.9564998, -6.829204)
+
+[node name="env_tv2" parent="World" unique_id=1096616437 instance=ExtResource("8_7lrji")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.313713, -1.2373927, -4.455096)
+
+[node name="env_stove2" parent="World" unique_id=836715133 instance=ExtResource("9_rssyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.469044, -1.6568925, -4.445495)
+
+[node name="env_sink2" parent="World" unique_id=1396714104 instance=ExtResource("10_hwp66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.34464, -1.5108218, -7.79433)
+
+[node name="MainDoor" parent="." unique_id=330460299 instance=ExtResource("11_hwp66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

@@ -4,6 +4,7 @@ extends CharacterBody3D
 @onready var head: Head = $Head
 @onready var interaction_raycast: RayCast3D = $Head/RayCast3D
 @onready var hand: Node3D = $Head/Hand
+@onready var debug_label: Label = $DebugLabel
 
 var current_state = State.Walk
 var current_item: Item = null
@@ -12,6 +13,7 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 var GRAVITY = ProjectSettings.get_setting("physics/3d/default_gravity")
 const MOUSE_SENS: float = 0.25
+const PUSH_FORCE: float = 5.0
 
 enum State {
 	Walk,
@@ -62,6 +64,15 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 	
+	if current_item is Food:
+		debug_label.text = "
+		radioactivity: %s
+		holiness: %s
+		esotericity: %s
+		" % [current_item.delta_radioactivity, current_item.delta_holiness, current_item.delta_esotericity]
+	else:
+		debug_label.text = ""
+
 func get_direction() -> Vector3:
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	return (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -102,15 +113,14 @@ func check_interaction():
 		
 	var collider = interaction_raycast.get_collider()
 	if collider and collider.has_method("interact"):
+		print(collider)
 		collider.interact(self)
 		
 func drop_item():
 	print(current_item)
 	if current_item != null:
-		print("дропни папочке")
-		var item_instance = current_item.item_scene.instantiate()
-		get_tree().root.add_child(item_instance)
-		item_instance.global_position = hand.global_position
-		current_item.queue_free()
+		current_item.reparent(get_tree().root)
+		current_item.global_position = hand.global_position
+		current_item.activate()
 		current_item = null
 		
