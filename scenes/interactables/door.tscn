@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b2fkmrsy4nn2s" path="res://scenes/interactables/rigid_body_3d.gd" id="2_fnoyy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fnoyy"]
-size = Vector3(1.2, 2.5, 0.1)
+size = Vector3(0.978418, 2.398877, 0.058642577)
 
 [sub_resource type="BoxMesh" id="BoxMesh_qq3h0"]
 size = Vector3(1, 2, 0.1)

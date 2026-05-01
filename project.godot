@@ -101,7 +101,9 @@ toggle_fullscreen={
 
 [physics]
 
+3d/run_on_separate_thread=true
 3d/physics_engine="Jolt Physics"
+3d/solver/solver_iterations=32
 
 [rendering]
 

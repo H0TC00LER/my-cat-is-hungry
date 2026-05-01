@@ -23,11 +23,10 @@ enum State {
 
 func add_item(item: Item) -> void:
 	item.reparent(hand)
-	item.disable()
+	#item.disable()
 	item.global_position = hand.global_position
+	item.transform.basis = Basis()
 	
-	print(item.global_position)
-	print(hand.global_position)
 	current_item = item
 
 func _ready() -> void:
@@ -120,7 +119,12 @@ func drop_item():
 	print(current_item)
 	if current_item != null:
 		current_item.reparent(get_tree().root)
-		current_item.global_position = hand.global_position
-		current_item.activate()
+	
+		current_item.global_position = head.global_position
+		#current_item.activate()
+		var direction = -head.global_transform.basis.z.normalized()
+		current_item.apply_central_impulse(direction * 10)
+
+		
 		current_item = null
 		

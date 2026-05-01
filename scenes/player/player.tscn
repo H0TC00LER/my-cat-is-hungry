@@ -4,12 +4,15 @@
 [ext_resource type="Script" uid="uid://dsueu1yatebgf" path="res://scenes/player/head.gd" id="2_dovo2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x7p2l"]
+radius = 0.32910156
+height = 1.4785156
 
 [node name="Player" type="CharacterBody3D" unique_id=2065585253]
+collision_layer = 2
 script = ExtResource("1_8afob")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2107901905]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7392578, 0)
 shape = SubResource("CapsuleShape3D_x7p2l")
 
 [node name="Head" type="Node3D" parent="." unique_id=1580716982]

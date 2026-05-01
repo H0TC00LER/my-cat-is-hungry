@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://12qtshxg2mkq"
-path.s3tc="res://.godot/imported/door_tex_door.png-31aaa333a50d0979c8e8819b6e5b6014.s3tc.ctex"
+uid="uid://27wet1c40h6o"
+path.s3tc="res://.godot/imported/env_door (1)_tex_door.png-8be0d6f69cf0b46cae762f8a1513c2ec.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/props/door/door_tex_door.png"
-dest_files=["res://.godot/imported/door_tex_door.png-31aaa333a50d0979c8e8819b6e5b6014.s3tc.ctex"]
+source_file="res://assets/props/door/env_door (1)_tex_door.png"
+dest_files=["res://.godot/imported/env_door (1)_tex_door.png-8be0d6f69cf0b46cae762f8a1513c2ec.s3tc.ctex"]
 
 [params]
 
