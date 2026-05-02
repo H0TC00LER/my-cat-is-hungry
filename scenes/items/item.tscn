@@ -4,13 +4,6 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xhhhv"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_snuct"]
-size = Vector3(0.2, 0.2, 0.2)
-
-[sub_resource type="SphereMesh" id="SphereMesh_xhhhv"]
-radius = 0.1
-height = 0.2
-
 [node name="Item" type="RigidBody3D" unique_id=725074557]
 collision_layer = 4
 mass = 5.0
@@ -19,7 +12,3 @@ can_sleep = false
 script = ExtResource("1_xhhhv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1620734247]
-shape = SubResource("BoxShape3D_snuct")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=422873377]
-mesh = SubResource("SphereMesh_xhhhv")

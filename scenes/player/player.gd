@@ -8,6 +8,7 @@ extends CharacterBody3D
 
 var current_state = State.Walk
 var current_item: Item = null
+var is_disabled: bool = false
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -52,9 +53,12 @@ func crouch(delta: float) -> void:
 	pass
 	
 func disabled(delta: float) -> void:
-	pass
+	return
 
 func _physics_process(delta: float) -> void:
+	if is_disabled:
+		return
+	
 	match current_state:
 		State.Walk:
 			walk(delta)
@@ -84,6 +88,9 @@ func get_raw_direction() -> Vector2:
 	return Input.get_vector("left", "right", "forward", "back")
 	
 func _unhandled_input(event: InputEvent) -> void:
+	if is_disabled:
+		return
+	
 	if event is InputEventMouseMotion:
 		rotate_camera(event)
 	
@@ -93,6 +100,8 @@ func rotate_camera(event: InputEventMouseMotion) -> void:
 	head.rotation.x = clamp(head.rotation.x, deg_to_rad(-89), deg_to_rad(89))
 	
 func _input(event: InputEvent) -> void:
+	if is_disabled:
+		return
 	if event.is_action_pressed("toggle_fullscreen"):  # Создайте действие в Project Settings
 		toggle_fullscreen()
 		
@@ -115,7 +124,9 @@ func check_interaction():
 		return
 		
 	var collider = interaction_raycast.get_collider()
-	if collider and collider.has_method("interact"):
+	if current_item is Scanner and collider is Item:
+			current_item.scan(collider)
+	elif collider and collider.has_method("interact"):
 		print(collider)
 		collider.interact(self)
 		
@@ -132,3 +143,9 @@ func drop_item():
 		
 		current_item = null
 		
+func disable() -> void:
+	is_disabled = true
+	
+func enable() -> void:
+	is_disabled = false
+	

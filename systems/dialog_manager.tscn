@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bxx4l8gfbu86a"]
+
+[ext_resource type="Script" uid="uid://bn5kb3sddrl4q" path="res://systems/dialog_manager.gd" id="1_bi6on"]
+[ext_resource type="FontFile" uid="uid://nl8ehk3njowa" path="res://systems/SiberianJam Danila Special.ttf" id="2_h8uxc"]
+
+[node name="DialogManager" type="CanvasLayer" unique_id=1184670097]
+script = ExtResource("1_bi6on")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=312678381]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 238.0
+offset_top = -268.0
+offset_right = -240.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 0.4745098)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=681554698]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer" unique_id=1544471035]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_h8uxc")
+theme_override_font_sizes/font_size = 40
+text = "фыоарфыоал
+фывфыафыа
+фыафывфыафв"

@@ -1,13 +1,14 @@
 [gd_scene format=4 uid="uid://cjqobv368aru"]
 
 [ext_resource type="PackedScene" uid="uid://8erij1hqafx3" path="res://scenes/player/player.tscn" id="1_72ix8"]
+[ext_resource type="Script" uid="uid://wmhrvjceqgyv" path="res://scenes/levels/main.gd" id="1_qgoyv"]
 [ext_resource type="PackedScene" uid="uid://cnx5hmktllu3u" path="res://scenes/items/item.tscn" id="2_2vj2h"]
 [ext_resource type="PackedScene" uid="uid://c0gr85osy4n3y" path="res://scenes/cat/cat.tscn" id="3_y0acb"]
 [ext_resource type="PackedScene" uid="uid://cti1kuw0033y3" path="res://scenes/items/food/food.tscn" id="4_j4d2a"]
-[ext_resource type="PackedScene" uid="uid://cd58ry4bp5g4m" path="res://scenes/interactables/door.tscn" id="5_u81e1"]
+[ext_resource type="PackedScene" uid="uid://c1kxfx35eo5ub" path="res://assets/food/tesseract/tesseract.glb" id="6_px1c8"]
 [ext_resource type="Texture2D" uid="uid://boywbyjkuv3w3" path="res://assets/levels/room_tex_floor.png" id="6_sv52t"]
 [ext_resource type="Texture2D" uid="uid://ddbdegidvd5l4" path="res://assets/levels/room_tex_wallpaper.png" id="7_7exfm"]
-[ext_resource type="PackedScene" uid="uid://b4egjckvpm0ky" path="res://assets/props/table/table.glb" id="7_vkq25"]
+[ext_resource type="PackedScene" uid="uid://lkv0ljnhji1v" path="res://assets/props/table/table.glb" id="7_vkq25"]
 [ext_resource type="PackedScene" uid="uid://dyb2d3wwrfa4t" path="res://assets/props/tv/env_tv.glb" id="8_7lrji"]
 [ext_resource type="PackedScene" uid="uid://crk1vbg0xrfji" path="res://assets/props/stove/env_stove.glb" id="9_rssyh"]
 [ext_resource type="PackedScene" uid="uid://iggwmpr2rn7q" path="res://assets/props/sink/env_sink.glb" id="10_hwp66"]
@@ -17,6 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://b1efi4l1w3ndu" path="res://scenes/interactables/cabinet.tscn" id="14_6ui35"]
 [ext_resource type="PackedScene" uid="uid://li7ldtldfi0m" path="res://scenes/items/other/axe.tscn" id="15_y56qp"]
 [ext_resource type="LightmapGIData" uid="uid://dvk1rsoiohdp7" path="res://scenes/levels/main.lmbake" id="17_7exfm"]
+[ext_resource type="PackedScene" uid="uid://bwgo68kcfsbnl" path="res://scenes/items/other/scanner.tscn" id="18_qgoyv"]
+[ext_resource type="PackedScene" uid="uid://db8o8pmwonh4j" path="res://assets/food/rat/rat.glb" id="20_xgklb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72ix8"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -148,78 +151,40 @@ size = Vector3(0.8800049, 1.0568848, 0.8409424)
 [sub_resource type="BoxShape3D" id="BoxShape3D_hwp66"]
 size = Vector3(1.5645142, 1.2314453, 0.93774414)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_px1c8"]
+size = Vector3(1.723877, 2.939209, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xgklb"]
+size = Vector3(0.40699464, 0.41865236, 0.40992433)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xgklb"]
+radius = 0.110839844
+height = 0.85913086
+
 [node name="Main" type="Node3D" unique_id=1488031043]
+script = ExtResource("1_qgoyv")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=202425278]
 environment = SubResource("Environment_y0acb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1548426990]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-light_energy = 2.0
+light_energy = 0.105
 light_specular = 0.0
 light_bake_mode = 1
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=2065585253 instance=ExtResource("1_72ix8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.683754, 6.1656094, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0254364, 6.1656094, 0)
 
 [node name="Item" parent="." unique_id=725074557 instance=ExtResource("2_2vj2h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7170095, 10.661426)
-
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1515156321]
-use_collision = true
-
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=39549155]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -0.5)
-use_collision = true
-size = Vector3(35, 1, 34)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=554947099]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.269775, 0.80828285, -11.946779)
-use_collision = true
-size = Vector3(14.07666, 4.368164, 0.91064453)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=201631146]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.219586, 0.80828285, 6.7500772)
-use_collision = true
-size = Vector3(14.07666, 4.368164, 0.91064453)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=585989720]
-transform = Transform3D(-0.5, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.5, -14.016662, 0.80828094, 7.2663336)
-use_collision = true
-size = Vector3(14.07666, 4.368164, 0.91064453)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7170095, -3.9349642)
 
 [node name="Cat" parent="." unique_id=155322492 instance=ExtResource("3_y0acb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.015953, -0.920846, -0.15823245)
-
-[node name="Food" parent="." unique_id=101725236 instance=ExtResource("4_j4d2a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1114974, 1.1309409, -5.383801)
-collision_layer = 1
-axis_lock_angular_x = true
-axis_lock_angular_z = true
-mass = 1.0
-physics_material_override = null
-can_sleep = true
-delta_radioactivity = 20
-delta_holiness = 10
-delta_esotericity = 5
-
-[node name="Food2" parent="." unique_id=1817834146 instance=ExtResource("4_j4d2a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1114974, 1.1309409, -4.397358)
-collision_layer = 1
-axis_lock_angular_x = true
-axis_lock_angular_z = true
-mass = 1.0
-physics_material_override = null
-can_sleep = true
-delta_radioactivity = 20
-delta_holiness = 10
-delta_esotericity = 5
-
-[node name="Door" parent="." unique_id=2117332238 instance=ExtResource("5_u81e1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7273138, 0.79898953, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.306763, -0.920846, -0.15823245)
 
 [node name="World" type="Node3D" parent="." unique_id=2011885222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.70919, 0, 0)
 
 [node name="room" type="Node3D" parent="World" unique_id=1697337973]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.032455, -1.5292737, -0.036297336)
@@ -243,9 +208,6 @@ physics_material_override = SubResource("PhysicsMaterial_px1c8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/room/env_room_walls/StaticBody3D" unique_id=1919105766]
 shape = SubResource("ConcavePolygonShape3D_45bys")
-
-[node name="table" parent="World" unique_id=913151978 instance=ExtResource("7_vkq25")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.265669, -0.9564998, -6.829204)
 
 [node name="env_tv2" parent="World" unique_id=1096616437 instance=ExtResource("8_7lrji")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.313713, -1.2373927, -4.455096)
@@ -290,13 +252,72 @@ transform = Transform3D(0.615, 0, 0, 0, 0.615, 0, 0, 0, 0.615, -38.987335, -0.54
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -34.172146, -1.2993562, 3.8571343)
 
 [node name="Axe" parent="." unique_id=1458729620 instance=ExtResource("15_y56qp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.379745, 0, -3.9354239)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.670555, 0, -3.9354239)
 collision_layer = 1
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 mass = 1.0
 physics_material_override = null
 can_sleep = true
+description = Array[String](["Охуенный топор", "Ставлю лайк"])
 
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=813390169]
 light_data = ExtResource("17_7exfm")
+
+[node name="Scanner" parent="." unique_id=9637067 instance=ExtResource("18_qgoyv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.0829988)
+
+[node name="table" parent="." unique_id=2011580505 instance=ExtResource("7_vkq25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5292845, -1.529274, -8.532414)
+
+[node name="ZeroEnding" type="Area3D" parent="." unique_id=335221941]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ZeroEnding" unique_id=2138461108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0688334, -0.09240723, 7.247756)
+shape = SubResource("BoxShape3D_px1c8")
+
+[node name="Food" type="Node3D" parent="." unique_id=214219898]
+metadata/_edit_lock_ = true
+
+[node name="Tesseract" parent="Food" unique_id=101725236 instance=ExtResource("4_j4d2a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1114974, 2.2850757, -5.383801)
+collision_layer = 1
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+mass = 1.0
+physics_material_override = null
+can_sleep = true
+delta_holiness = 35
+delta_esotericity = 50
+
+[node name="CollisionShape3D" parent="Food/Tesseract" index="0" unique_id=1620734247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020257473, 0.02016604, 0.07348013)
+shape = SubResource("BoxShape3D_xgklb")
+
+[node name="tesseract" parent="Food/Tesseract" unique_id=1331630203 instance=ExtResource("6_px1c8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02271223, 0.013819218, 0.07683802)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Food/Tesseract" unique_id=2140953020]
+light_color = Color(0.40784314, 1, 1, 1)
+light_specular = 0.0
+
+[node name="Rat" parent="Food" unique_id=1817834146 instance=ExtResource("4_j4d2a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1114974, 1.1309409, -4.397358)
+collision_layer = 1
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+mass = 1.0
+physics_material_override = null
+can_sleep = true
+delta_holiness = 15
+delta_esotericity = 35
+
+[node name="CollisionShape3D" parent="Food/Rat" index="0" unique_id=1620734247]
+transform = Transform3D(3.090862e-08, -0.7071068, -0.7071067, -1, -4.371139e-08, 0, -3.0908613e-08, 0.7071067, -0.7071068, 0.17473412, 0, -0.21447515)
+shape = SubResource("CapsuleShape3D_xgklb")
+
+[node name="rat" parent="Food/Rat" unique_id=443905205 instance=ExtResource("20_xgklb")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 0.0926466, 0, -0.13238764)
+
+[editable path="Food/Tesseract"]
+[editable path="Food/Rat"]

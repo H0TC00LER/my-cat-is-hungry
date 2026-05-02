@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bk850flu4pjvl"]
+
+[ext_resource type="Script" uid="uid://dwbvwcadk1koi" path="res://scenes/endings/ending.gd" id="1_1dx4u"]
+[ext_resource type="Texture2D" uid="uid://ca6wbi4jrbmke" path="res://assets/props/carpet/carpet_tex_carpet.png" id="1_s7omi"]
+
+[node name="Ending" type="CanvasLayer" unique_id=1893010811]
+layer = -14
+script = ExtResource("1_1dx4u")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=214963851]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1595732508]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 300
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer" unique_id=1466470603]
+layout_mode = 2
+texture = ExtResource("1_s7omi")
+expand_mode = 1

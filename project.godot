@@ -15,9 +15,20 @@ run/main_scene="uid://cjqobv368aru"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DialogManager="*uid://bxx4l8gfbu86a"
+FadeScreen="*uid://ca3o35jpnxo4w"
+QuestUi="*uid://doah4rl1kdxsl"
+EventManager="*uid://dc7kxnsmivjq"
+
 [display]
 
 window/size/mode=3
+
+[global_group]
+
+player=""
 
 [importer_defaults]
 
@@ -104,7 +115,7 @@ toggle_fullscreen={
 3d/run_on_separate_thread=true
 3d/physics_engine="Jolt Physics"
 jolt_physics_3d/simulation/velocity_steps=60
-3d/solver/solver_iterations=64
+3d/solver/solver_iterations=128
 
 [rendering]
 

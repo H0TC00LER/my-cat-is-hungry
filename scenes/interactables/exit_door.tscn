@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c5dcnp8mbllg"]
+
+[ext_resource type="Script" uid="uid://boraj1njd6nrt" path="res://scenes/interactables/exit_door.gd" id="1_owloi"]
+[ext_resource type="PackedScene" uid="uid://buef1f2hi83w" path="res://assets/props/door/env_door (1).glb" id="1_vp25d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_owloi"]
+size = Vector3(1.5858765, 2.6234741, 0.40673828)
+
+[node name="ExitDoor" type="Area3D" unique_id=2122587927]
+script = ExtResource("1_owloi")
+
+[node name="env_door (1)" parent="." unique_id=366372457 instance=ExtResource("1_vp25d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2246256, 0, -0.9333031)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1046668087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021392822, 1.3102112, -0.02368164)
+shape = SubResource("BoxShape3D_owloi")
