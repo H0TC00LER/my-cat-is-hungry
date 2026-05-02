@@ -21,15 +21,19 @@ enum State {
 	Disabled
 }
 
+
+
 func add_item(item: Item) -> void:
 	item.reparent(hand)
-	#item.disable()
+	item.disable()
 	item.global_position = hand.global_position
 	item.transform.basis = Basis()
 	
 	current_item = item
 
 func _ready() -> void:
+	collision_layer = 2
+	collision_mask = 1
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func walk(delta: float) -> void:
@@ -121,7 +125,7 @@ func drop_item():
 		current_item.reparent(get_tree().root)
 	
 		current_item.global_position = head.global_position
-		#current_item.activate()
+		current_item.activate()
 		var direction = -head.global_transform.basis.z.normalized()
 		current_item.apply_central_impulse(direction * 10)
 

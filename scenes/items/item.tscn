@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://b5op35kvt02hc" path="res://scenes/items/item.gd" id="1_xhhhv"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xhhhv"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_snuct"]
 size = Vector3(0.2, 0.2, 0.2)
 
@@ -11,6 +13,9 @@ height = 0.2
 
 [node name="Item" type="RigidBody3D" unique_id=725074557]
 collision_layer = 4
+mass = 5.0
+physics_material_override = SubResource("PhysicsMaterial_xhhhv")
+can_sleep = false
 script = ExtResource("1_xhhhv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1620734247]

@@ -30,4 +30,4 @@ node_b = NodePath("../RigidBody3D")
 angular_limit/enable = true
 angular_limit/lower = 0.0
 motor/enable = true
-motor/target_velocity = -1.0471976
+motor/target_velocity = -2.0943952

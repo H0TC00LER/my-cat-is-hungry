@@ -172,7 +172,8 @@ transform = Transform3D(1, 0, 0, 0, -3.5762787e-07, -0.99999994, 0, 0.99999994, 
 mesh = SubResource("ArrayMesh_2tns6")
 
 [node name="HingeJoint3D" parent="Right" index="1" unique_id=201777865]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.56513876, 0.99583244, -0.06307565)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.55091184, 1.1856296, -0.065756366)
+node_a = NodePath("../../env_cabinet/StaticBody3D")
 
 [editable path="Left"]
 [editable path="Right"]
