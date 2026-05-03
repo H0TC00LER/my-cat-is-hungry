@@ -21,6 +21,7 @@ DialogManager="*uid://bxx4l8gfbu86a"
 FadeScreen="*uid://ca3o35jpnxo4w"
 QuestUi="*uid://doah4rl1kdxsl"
 EventManager="*uid://dc7kxnsmivjq"
+SafeUi="*uid://bgeqre7xu2ss3"
 
 [display]
 

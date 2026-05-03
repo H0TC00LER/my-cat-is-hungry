@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://bgeqre7xu2ss3"]
+
+[ext_resource type="FontFile" uid="uid://nl8ehk3njowa" path="res://systems/SiberianJam Danila Special.ttf" id="1_10dm6"]
+[ext_resource type="Script" uid="uid://rej4ovvr78b" path="res://systems/safe_ui.gd" id="1_oddul"]
+
+[node name="SafeUI" type="CanvasLayer" unique_id=1392199498]
+script = ExtResource("1_oddul")
+
+[node name="Label" type="Label" parent="." unique_id=1437195249]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -334.0
+offset_top = -220.0
+offset_right = 334.0
+offset_bottom = -134.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_10dm6")
+theme_override_font_sizes/font_size = 78
+text = "1234"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1316410629]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -112.0
+offset_right = 149.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+columns = 3
+
+[node name="Button" type="Button" parent="GridContainer" unique_id=1001399742]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_10dm6")
+theme_override_font_sizes/font_size = 77
+text = "1"
+
+[node name="Button2" type="Button" parent="GridContainer" unique_id=448044821]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_10dm6")
+theme_override_font_sizes/font_size = 77
+text = "2"
+
+[node name="Button3" type="Button" parent="GridContainer" unique_id=790464361]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_10dm6")
+theme_override_font_sizes/font_size = 77
+text = "3
+"
+
+[node name="Button4" type="Button" parent="GridContainer" unique_id=1268279839]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_10dm6")
+theme_override_font_sizes/font_size = 77
+text = "4"
+
+[node name="Button5" type="Button" parent="GridContainer" unique_id=301428004]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_10dm6")
+theme_override_font_sizes/font_size = 77
+text = "5"
+
+[node name="Button6" type="Button" parent="GridContainer" unique_id=1872538943]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_10dm6")
+theme_override_font_sizes/font_size = 77
+text = "6
+"
+
+[node name="Button7" type="Button" parent="GridContainer" unique_id=1376623960]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_10dm6")
+theme_override_font_sizes/font_size = 77
+text = "7"
+
+[node name="Button8" type="Button" parent="GridContainer" unique_id=135505770]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_10dm6")
+theme_override_font_sizes/font_size = 77
+text = "8"
+
+[node name="Button9" type="Button" parent="GridContainer" unique_id=1189634406]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_10dm6")
+theme_override_font_sizes/font_size = 77
+text = "9
+"

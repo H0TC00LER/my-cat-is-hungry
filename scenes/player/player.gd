@@ -81,7 +81,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			hand_cursor.visible = false
 			
-		if collider is Item and current_item is Scanner:
+		if (collider is Item or collider is Cat) and current_item is Scanner:
 			hand_cursor.visible = false
 			scan_cursor.visible = true
 		else:
@@ -139,12 +139,23 @@ func toggle_fullscreen() -> void:
 		print("Переключено в полноэкранный режим")
 		
 func check_interaction():
+		
 	if not interaction_raycast.is_colliding():
 		return
 		
 	var collider = interaction_raycast.get_collider()
 	if current_item is Scanner and collider is Item:
-			current_item.scan(collider)
+		current_item.scan(collider)
+	elif current_item is Scanner and collider is Cat:
+		current_item.scan_cat(collider)
+	elif collider and collider is Item:
+		if EventManager.get_current_event() == "wash_hands_quest":
+			DialogManager.show_dialog(["Сначала умыться."])
+			return
+		elif EventManager.get_current_event() == "go_to_sleep_quest":
+			DialogManager.show_dialog(["На сегодня хватит. Пора спать."])
+			return
+		collider.interact(self)
 	elif collider and collider.has_method("interact"):
 		print(collider)
 		collider.interact(self)

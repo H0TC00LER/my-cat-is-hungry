@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://c4pwmmt3glur4" path="res://assets/props/mirror/mirror.glb" id="24_im81g"]
 [ext_resource type="PackedScene" uid="uid://csgu738jx0ps0" path="res://assets/props/toilet/toilet.glb" id="25_ysjpo"]
 [ext_resource type="PackedScene" uid="uid://ddo81y7hgtbnr" path="res://assets/props/bath/bath.glb" id="26_gexqn"]
+[ext_resource type="PackedScene" uid="uid://1f174i0l1eyh" path="res://assets/props/bed/bed.glb" id="27_kc8j3"]
 [ext_resource type="PackedScene" uid="uid://ct3mjr4iwtfmy" path="res://assets/props/trapdoor/trapdoor.glb" id="28_e5eww"]
 [ext_resource type="PackedScene" uid="uid://bilgxprpi3rie" path="res://assets/props/pc/pc.glb" id="29_8qayg"]
 [ext_resource type="PackedScene" uid="uid://2tpihk5nrfvm" path="res://assets/props/battery/battery.glb" id="29_x2df8"]
@@ -53,8 +54,11 @@
 [ext_resource type="PackedScene" uid="uid://qckt3furekt0" path="res://assets/food/uranium/uranium.glb" id="44_lk2ds"]
 [ext_resource type="PackedScene" uid="uid://dlxatccw2b0a" path="res://assets/food/shampoo/shampoo.glb" id="45_jt1ke"]
 [ext_resource type="PackedScene" uid="uid://bkwbwiv5phvte" path="res://assets/food/mushroom/mushroom.glb" id="45_ukbqq"]
+[ext_resource type="PackedScene" uid="uid://tbqd115uhuna" path="res://assets/food/noodles/noodles.glb" id="46_jhdis"]
 [ext_resource type="PackedScene" uid="uid://b0f2ch3weyfeo" path="res://assets/food/holy_water/holy_water.glb" id="46_y2451"]
+[ext_resource type="PackedScene" uid="uid://cwwu7cfm87fgm" path="res://assets/food/dumplings/dumplins.glb" id="47_4460h"]
 [ext_resource type="PackedScene" uid="uid://chpm5oo601m5c" path="res://assets/food/eye/eye.glb" id="47_vw7vg"]
+[ext_resource type="PackedScene" uid="uid://c5iwxsv0etu15" path="res://assets/food/sauce/sauce.glb" id="49_g8k1g"]
 [ext_resource type="PackedScene" uid="uid://dyw3sdvgd4w7y" path="res://scenes/interactables/dialog_trigger.tscn" id="53_olgwj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72ix8"]
@@ -508,6 +512,13 @@ size = Vector3(0.41723633, 0.39001465, 0.3388672)
 [sub_resource type="BoxShape3D" id="BoxShape3D_jhdis"]
 size = Vector3(0.33984375, 0.5477295, 0.22009277)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_4460h"]
+size = Vector3(0.3852539, 0.5181885, 0.22290039)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xgrmk"]
+height = 0.41705322
+radius = 0.22509766
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y05oo"]
 radius = 0.12207031
 height = 0.9284668
@@ -591,7 +602,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0254364, 6.1656094, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7170095, -3.9349642)
 
 [node name="Cat" parent="." unique_id=155322492 instance=ExtResource("3_y0acb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.306763, -0.920846, -0.15823245)
+transform = Transform3D(-0.23239307, 0, 0.972622, 0, 1, 0, -0.972622, 0, -0.23239307, -7.4971375, -0.26607025, -0.24239278)
 
 [node name="World" type="Node3D" parent="." unique_id=2011885222]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.70919, 0, 0)
@@ -753,7 +764,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.721657, -1.0065724, -3.38
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.4385, -0.3579846, -6.7486467)
 
 [node name="bookshelf2" parent="World" unique_id=840263824 instance=ExtResource("12_2xkjh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.480434, -0.3579846, -6.7486467)
+transform = Transform3D(0.99997467, -0.00567138, 0.0043011685, 0.005681351, 0.9999812, -0.0023108572, -0.0042879893, 0.0023352206, 0.9999881, -34.480434, -0.3579846, -6.7486467)
 
 [node name="trapdoor" parent="World" unique_id=1588215429 instance=ExtResource("28_e5eww")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.862774, -1.6559074, 3.951045)
@@ -877,6 +888,9 @@ spot_angle = 63.09
 [node name="bookshelf_small2" parent="World" unique_id=1798369229 instance=ExtResource("33_cvmpn")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -33.24808, -0.97144365, -2.576486)
 
+[node name="bed" parent="World" unique_id=26560457 instance=ExtResource("27_kc8j3")]
+transform = Transform3D(-3.9558806e-08, 0, 0.905, 0, 0.905, 0, -0.905, 0, -3.9558806e-08, -39.94238, -1.0104551, -0.45435405)
+
 [node name="Axe" parent="." unique_id=1458729620 instance=ExtResource("15_y56qp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.670555, 0, -3.9354239)
 collision_layer = 1
@@ -897,7 +911,7 @@ transform = Transform3D(-3.090862e-08, 0.7071068, -0.7071067, -1, -4.371139e-08,
 metadata/_edit_lock_ = true
 
 [node name="Tesseract" parent="Food" unique_id=101725236 instance=ExtResource("4_j4d2a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1114974, 2.2850757, -5.383801)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1114974, 0.4135008, -5.383801)
 collision_layer = 1
 axis_lock_angular_x = true
 axis_lock_angular_z = true
@@ -919,7 +933,7 @@ mesh = SubResource("ArrayMesh_ouml3")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Food/Tesseract" unique_id=2140953020]
 light_color = Color(0.40784314, 1, 1, 1)
-light_energy = 0.5
+light_energy = 0.1
 light_specular = 0.0
 
 [node name="Rat" parent="Food" unique_id=1817834146 instance=ExtResource("4_j4d2a")]
@@ -1006,6 +1020,42 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00024366379, 0.03652951, 8.
 shape = SubResource("BoxShape3D_jhdis")
 
 [node name="shampoo" parent="Food/Shampoo" unique_id=1401184322 instance=ExtResource("45_jt1ke")]
+
+[node name="Noodles" parent="Food" unique_id=167091942 instance=ExtResource("4_j4d2a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1756754, 0.042489618, -5.031885)
+delta_radioactivity = -15
+delta_holiness = -15
+delta_esotericity = -15
+
+[node name="CollisionShape3D" parent="Food/Noodles" index="0" unique_id=1620734247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019043446, -0.00076296926, -0.00394392)
+shape = SubResource("BoxShape3D_4460h")
+
+[node name="noodles" parent="Food/Noodles" unique_id=1767412375 instance=ExtResource("46_jhdis")]
+
+[node name="Dumplings" parent="Food" unique_id=1612328485 instance=ExtResource("4_j4d2a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.077243, 0.042489618, -5.031885)
+delta_radioactivity = -15
+delta_holiness = -15
+delta_esotericity = -15
+
+[node name="CollisionShape3D" parent="Food/Dumplings" index="0" unique_id=1620734247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019043446, -0.00076296926, -0.00394392)
+shape = SubResource("BoxShape3D_4460h")
+
+[node name="dumplins" parent="Food/Dumplings" unique_id=1734180703 instance=ExtResource("47_4460h")]
+
+[node name="Sauce" parent="Food" unique_id=1528249389 instance=ExtResource("4_j4d2a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.307363, 0.042489618, -5.031885)
+delta_radioactivity = -15
+delta_holiness = -15
+delta_esotericity = -15
+
+[node name="CollisionShape3D" parent="Food/Sauce" index="0" unique_id=1620734247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019043446, 0.0098876655, -0.00394392)
+shape = SubResource("CylinderShape3D_xgrmk")
+
+[node name="sauce" parent="Food/Sauce" unique_id=896404980 instance=ExtResource("49_g8k1g")]
 
 [node name="Mnogonozhka" parent="Food" unique_id=459926062 instance=ExtResource("4_j4d2a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.190732, -1.4201741, -6.3488393)
@@ -1230,7 +1280,13 @@ light_color = Color(0.67954504, 0.7485923, 0.49038416, 1)
 light_energy = 16.0
 light_specular = 0.0
 light_bake_mode = 1
+spot_range = 7.0
 spot_angle = 47.79
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Lighting/env_lamp3" unique_id=927509236]
+transform = Transform3D(-0.14778662, -1.8626451e-08, -0.039599318, 2.2351742e-08, -0.153, 2.9802322e-08, -0.039599337, 3.7252903e-09, 0.14778665, -0.009748936, -0.15894663, -0.006790638)
+mesh = SubResource("CapsuleMesh_yb600")
+surface_material_override/0 = SubResource("StandardMaterial3D_sy51j")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Lighting" unique_id=1441301593]
 transform = Transform3D(-0.95935345, -3.6962078e-10, -0.28220752, -0.25486043, 0.42943972, 0.8663881, 0.12119106, 0.9030958, -0.41198438, 0.77288944, 0.16898036, -0.47108635)
@@ -1266,6 +1322,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23365784)
 [editable path="Food/Souvenir"]
 [editable path="Food/Steklovata"]
 [editable path="Food/Shampoo"]
+[editable path="Food/Noodles"]
+[editable path="Food/Dumplings"]
+[editable path="Food/Sauce"]
 [editable path="Food/Mnogonozhka"]
 [editable path="Food/Emptiness"]
 [editable path="Food/Uranium"]

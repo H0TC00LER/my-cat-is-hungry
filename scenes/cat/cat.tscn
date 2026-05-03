@@ -1,24 +1,17 @@
 [gd_scene format=3 uid="uid://c0gr85osy4n3y"]
 
 [ext_resource type="Script" uid="uid://bbdbwufskjmvx" path="res://scenes/cat/cat.gd" id="1_1btca"]
+[ext_resource type="PackedScene" uid="uid://cxrw1hjvuinpq" path="res://assets/Musya/musya.glb" id="2_fblw1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h2wdu"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_h2wdu"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2wdu"]
-albedo_color = Color(0.20784314, 1, 1, 1)
+size = Vector3(2, 2, 3.1550293)
 
 [node name="Cat" type="StaticBody3D" unique_id=155322492]
 script = ExtResource("1_1btca")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=63398131]
+transform = Transform3D(0.705, 0, 0, 0, 0.705, 0, 0, 0, 0.705, 0, 0, -0.08679199)
 shape = SubResource("BoxShape3D_h2wdu")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1520896183]
-mesh = SubResource("BoxMesh_h2wdu")
-surface_material_override/0 = SubResource("StandardMaterial3D_h2wdu")
-
-[node name="Label3D" type="Label3D" parent="." unique_id=376772557]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3546251, 0)
-text = "LOOOOOL"
+[node name="musya" parent="." unique_id=1208894863 instance=ExtResource("2_fblw1")]
+transform = Transform3D(8.54, 0, 0, 0, 8.54, 0, 0, 0, 8.54, 0, 0, 0)

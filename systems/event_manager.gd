@@ -17,7 +17,6 @@ func _ready() -> void:
 var base_events_array: Array = ["wake_up",
 	"wake_up_dialog",
 	"wash_hands_quest",
-	"turn_lights_quest",
 	"feed_the_cat_quest",
 	"go_to_sleep_quest",
 	"sleep"]
@@ -76,6 +75,8 @@ func next_event() -> void:
 			QuestUi.show_quest("-Помыть руки")
 		"feed_the_cat_quest":
 			QuestUi.show_quest("-Покормить кота")
+		"go_to_sleep_quest":
+			QuestUi.show_quest("-Идти спать")
 		"sleep":
 			player.disable()
 			FadeScreen.fade_out() 
@@ -89,7 +90,6 @@ func _on_day_finished() -> void:
 	
 func complete_event(event_name: String) -> void:
 	if get_current_event() == event_name:
-		current_event += 1
 		next_event()
 	
 func get_current_event() -> String:
