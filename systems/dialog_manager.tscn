@@ -38,3 +38,4 @@ theme_override_font_sizes/font_size = 40
 text = "фыоарфыоал
 фывфыафыа
 фыафывфыафв"
+autowrap_mode = 2

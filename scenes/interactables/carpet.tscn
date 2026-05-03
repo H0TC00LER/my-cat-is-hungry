@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cvin5j77kiuby"]
+
+[ext_resource type="Script" uid="uid://pr6gwhndeop" path="res://scenes/interactables/carpet.gd" id="1_a1khg"]
+[ext_resource type="PackedScene" uid="uid://csfhon05st5p6" path="res://assets/props/carpet/carpet.glb" id="1_ibrbk"]
+
+[node name="Carpet" type="Node3D" unique_id=547811311]
+script = ExtResource("1_a1khg")
+
+[node name="carpet" parent="." unique_id=1492928191 instance=ExtResource("1_ibrbk")]
