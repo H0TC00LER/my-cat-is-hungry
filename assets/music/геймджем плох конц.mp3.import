@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuvoenp4c8iuq"
+path="res://.godot/imported/геймджем плох конц.mp3-0784c05d84c3de34042700020d393f5f.mp3str"
+
+[deps]
+
+source_file="res://assets/music/геймджем плох конц.mp3"
+dest_files=["res://.godot/imported/геймджем плох конц.mp3-0784c05d84c3de34042700020d393f5f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

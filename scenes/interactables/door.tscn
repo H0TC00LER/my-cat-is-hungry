@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c6cihqv3bjtod" path="res://scenes/interactables/door.gd" id="1_qq3h0"]
 [ext_resource type="Script" uid="uid://b2fkmrsy4nn2s" path="res://scenes/interactables/rigid_body_3d.gd" id="2_fnoyy"]
+[ext_resource type="AudioStream" uid="uid://baxgh60u6ytnp" path="res://assets/sounds/дверь шкафа  откр.wav" id="3_xetrc"]
+[ext_resource type="AudioStream" uid="uid://ddh7nwbw1x7c8" path="res://assets/sounds/дверь шкафа  закр.wav" id="4_nmwkn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fnoyy"]
 size = Vector3(0.978418, 2.398877, 0.058642577)
@@ -24,3 +26,9 @@ angular_limit/enable = true
 angular_limit/lower = 0.0
 motor/enable = true
 motor/target_velocity = -2.0943952
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2089266490]
+stream = ExtResource("3_xetrc")
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="." unique_id=331408915]
+stream = ExtResource("4_nmwkn")

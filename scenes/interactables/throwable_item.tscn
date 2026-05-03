@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://g0wpbe26jpm8"]
+
+[ext_resource type="PackedScene" uid="uid://cnx5hmktllu3u" path="res://scenes/items/item.tscn" id="1_nbvpe"]
+[ext_resource type="PackedScene" uid="uid://c6uiwnb75rig6" path="res://assets/props/box/коробки закр.glb" id="2_2u27j"]
+[ext_resource type="Script" uid="uid://cb0doq2ybpqbk" path="res://scenes/interactables/throwable_item.gd" id="2_ptiwk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ptiwk"]
+size = Vector3(0.7380371, 0.6595764, 0.829834)
+
+[node name="ThrowableItem" unique_id=725074557 instance=ExtResource("1_nbvpe")]
+collision_layer = 7
+script = ExtResource("2_ptiwk")
+description = Array[String](["Это просто картонная коробка.", "Ничего не делает, кроме как мешает пройти."])
+
+[node name="CollisionShape3D" parent="." index="0" unique_id=1620734247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2600088, -0.17504144, -0.24461925)
+shape = SubResource("BoxShape3D_ptiwk")
+
+[node name="коробки закр" parent="." index="2" unique_id=1590224282 instance=ExtResource("2_2u27j")]
+transform = Transform3D(0.37, 0, 0, 0, 0.37, 0, 0, 0, 0.37, -0.27014065, -0.16745782, -0.25084484)

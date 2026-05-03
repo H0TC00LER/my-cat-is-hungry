@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7wtuv7nc3i4l"
+path="res://.godot/imported/заставка блатная.mp3-7d6d973f89bde5d8650c9ad2678fd569.mp3str"
+
+[deps]
+
+source_file="res://assets/music/заставка блатная.mp3"
+dest_files=["res://.godot/imported/заставка блатная.mp3-7d6d973f89bde5d8650c9ad2678fd569.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

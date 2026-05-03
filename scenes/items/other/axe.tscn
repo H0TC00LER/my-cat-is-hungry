@@ -2,20 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://cnx5hmktllu3u" path="res://scenes/items/item.tscn" id="1_6wg5h"]
 [ext_resource type="Script" uid="uid://bm7nwex88137k" path="res://scenes/items/other/axe.gd" id="2_fl6la"]
+[ext_resource type="PackedScene" uid="uid://donx88f6qhcp7" path="res://assets/props/axe/axe.glb" id="3_8wwxj"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fl6la"]
-size = Vector3(0.9545654, 0.2, 0.2)
-
-[sub_resource type="BoxMesh" id="BoxMesh_8wwxj"]
-size = Vector3(1.12, 0.055, 0.055)
+[sub_resource type="BoxShape3D" id="BoxShape3D_8wwxj"]
+size = Vector3(1.0874803, 0.47966918, 0.3878296)
 
 [node name="Axe" unique_id=725074557 instance=ExtResource("1_6wg5h")]
 script = ExtResource("2_fl6la")
+description = Array[String](["Самый обычный топор."])
 
 [node name="CollisionShape3D" parent="." index="0" unique_id=1620734247]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
-shape = SubResource("BoxShape3D_fl6la")
+transform = Transform3D(-5.209661e-08, 3.1294114e-08, 1, 0.9659258, 0.25881907, 4.2221945e-08, -0.25881907, 0.9659258, -4.371139e-08, 0.00518186, 0.19248173, 0.06657511)
+shape = SubResource("BoxShape3D_8wwxj")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="1" unique_id=1068856217]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("BoxMesh_8wwxj")
+[node name="axe" parent="." index="2" unique_id=832097564 instance=ExtResource("3_8wwxj")]
+transform = Transform3D(-1.4206198e-08, -0.325, 7.554205e-16, 0.08411627, -3.676839e-09, -0.31392586, 0.31392586, -1.3722132e-08, 0.08411627, 0, -0.23376952, 0.21483168)

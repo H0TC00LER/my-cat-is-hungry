@@ -133,10 +133,8 @@ func _input(event: InputEvent) -> void:
 func toggle_fullscreen() -> void:
 	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-		print("Переключено в оконный режим")
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-		print("Переключено в полноэкранный режим")
 		
 func check_interaction():
 		
@@ -161,6 +159,7 @@ func drop_item():
 		current_item.activate()
 		var direction = -head.global_transform.basis.z.normalized()
 		current_item.apply_central_impulse(direction * 10)
+		current_item.audio_stream_player_3d.play()
 
 		
 		current_item = null

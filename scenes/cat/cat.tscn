@@ -2,11 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bbdbwufskjmvx" path="res://scenes/cat/cat.gd" id="1_1btca"]
 [ext_resource type="PackedScene" uid="uid://cxrw1hjvuinpq" path="res://assets/Musya/musya.glb" id="2_fblw1"]
+[ext_resource type="AudioStream" uid="uid://bhd4jyc8d1tv7" path="res://assets/sounds/муся 1.wav" id="3_hyd08"]
+[ext_resource type="AudioStream" uid="uid://fsxhht8s61n5" path="res://assets/sounds/муся мурч.wav" id="4_bryel"]
+[ext_resource type="PackedScene" uid="uid://p4378vqjp4e4" path="res://assets/Musya/customisation/cust.glb" id="5_t8swq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h2wdu"]
 size = Vector3(2, 2, 3.1550293)
 
-[node name="Cat" type="StaticBody3D" unique_id=155322492]
+[node name="Cat" type="StaticBody3D" unique_id=155322492 groups=["cat"]]
 script = ExtResource("1_1btca")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=63398131]
@@ -15,3 +18,41 @@ shape = SubResource("BoxShape3D_h2wdu")
 
 [node name="musya" parent="." unique_id=1208894863 instance=ExtResource("2_fblw1")]
 transform = Transform3D(8.54, 0, 0, 0, 8.54, 0, 0, 0, 8.54, 0, 0, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=102042390]
+stream = ExtResource("3_hyd08")
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="." unique_id=668271844]
+stream = ExtResource("4_bryel")
+
+[node name="cust" parent="." unique_id=214245451 instance=ExtResource("5_t8swq")]
+transform = Transform3D(8.54, 0, 0, 0, 8.54, 0, 0, 0, 8.54, 0, 0, 0)
+
+[node name="Eyes" parent="cust" index="0" unique_id=1299438131]
+visible = false
+
+[node name="horns" parent="cust" index="1" unique_id=1618736329]
+visible = false
+
+[node name="Legs" parent="cust" index="2" unique_id=187753183]
+visible = false
+
+[node name="claws" parent="cust" index="3" unique_id=891093191]
+visible = false
+
+[node name="Wings" parent="cust" index="4" unique_id=1477279479]
+visible = false
+
+[node name="Nimb" parent="cust" index="5" unique_id=1615556982]
+visible = false
+
+[node name="tent2" parent="cust" index="6" unique_id=1122248251]
+visible = false
+
+[node name="tent3" parent="cust" index="7" unique_id=1878835521]
+visible = false
+
+[node name="tent1" parent="cust" index="8" unique_id=27527413]
+visible = false
+
+[editable path="cust"]

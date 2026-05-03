@@ -2,6 +2,7 @@ class_name Item
 extends RigidBody3D
 
 var item_scene = preload("res://scenes/items/item.tscn")
+@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 @export var description: Array[String]
 
@@ -24,6 +25,7 @@ func _ready() -> void:
 
 func interact(player: Player) -> void:
 	if player.current_item == null:
+		audio_stream_player_3d.play()
 		player.add_item(self)
 
 	

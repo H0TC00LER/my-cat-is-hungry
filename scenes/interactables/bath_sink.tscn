@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dtgfm7ud8cd8" path="res://assets/props/sink_bath/sink_bath.glb" id="1_gihaw"]
 [ext_resource type="Script" uid="uid://fwa0om3278e" path="res://scenes/interactables/bath_sink.gd" id="1_jxt8g"]
+[ext_resource type="AudioStream" uid="uid://sthq3tnpr8ga" path="res://assets/sounds/вода  - Part_1.wav" id="3_c28kr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jxt8g"]
 size = Vector3(1.8599854, 1.6868896, 1.562561)
@@ -15,4 +16,6 @@ script = ExtResource("1_jxt8g")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.023620605, 0.0006713867, 0.028411865)
 shape = SubResource("BoxShape3D_jxt8g")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1589056403]
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="." unique_id=239591148]
+stream = ExtResource("3_c28kr")
+max_distance = 3.0

@@ -1,7 +1,10 @@
 extends Area3D
 
+@onready var audio_stream_player_3d_2: AudioStreamPlayer3D = $AudioStreamPlayer3D2
+
 func interact(player: Player) -> void:
 	if EventManager.get_current_event() == "wash_hands_quest":
+		audio_stream_player_3d_2.play()
 		player.disable()
 		FadeScreen.fade_out()
 		FadeScreen.fade_finished.connect(_on_fade_out, CONNECT_ONE_SHOT)

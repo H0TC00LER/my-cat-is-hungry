@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c506evs6515ab"
+path="res://.godot/imported/джем титры.mp3-9b7b15cf0bfa4d3d0358a534d4b86798.mp3str"
+
+[deps]
+
+source_file="res://assets/music/джем титры.mp3"
+dest_files=["res://.godot/imported/джем титры.mp3-9b7b15cf0bfa4d3d0358a534d4b86798.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

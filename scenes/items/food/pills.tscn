@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dnx2dj12frsx8"]
+
+[ext_resource type="PackedScene" uid="uid://cti1kuw0033y3" path="res://scenes/items/food/food.tscn" id="1_3ckn6"]
+[ext_resource type="PackedScene" uid="uid://b8mdl8wd7iw2d" path="res://assets/food/pills/pills.glb" id="2_5nrjl"]
+[ext_resource type="Script" uid="uid://c511rie8mcae7" path="res://scenes/items/food/pills.gd" id="2_85wdg"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_85wdg"]
+height = 0.5253296
+radius = 0.22265625
+
+[node name="Pills" unique_id=725074557 instance=ExtResource("1_3ckn6")]
+script = ExtResource("2_85wdg")
+delta_radioactivity = -242
+delta_holiness = -530
+delta_esotericity = -423
+description = Array[String](["Какие-то странные таблетки. Что это?"])
+
+[node name="CollisionShape3D" parent="." index="0" unique_id=1620734247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.028656006, 0)
+shape = SubResource("CylinderShape3D_85wdg")
+
+[node name="pills" parent="." index="2" unique_id=1487631047 instance=ExtResource("2_5nrjl")]
+transform = Transform3D(0.31, 0, 0, 0, 0.31, 0, 0, 0, 0.31, 0, 0, 0)

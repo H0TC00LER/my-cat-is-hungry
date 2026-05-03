@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cs6mwlud2ex2c"]
+
+[ext_resource type="Script" uid="uid://bnpn167q16pqn" path="res://scenes/levels/main_menu.gd" id="1_geflf"]
+[ext_resource type="Texture2D" uid="uid://d3uox77x41x63" path="res://assets/menu.png" id="1_leamy"]
+[ext_resource type="FontFile" uid="uid://nl8ehk3njowa" path="res://systems/SiberianJam Danila Special.ttf" id="2_721jg"]
+[ext_resource type="AudioStream" uid="uid://b0dgp8psol483" path="res://assets/music/геймджем мэйн.mp3" id="3_721jg"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=946214982]
+script = ExtResource("1_geflf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=245979743]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_leamy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1742920139]
+offset_left = 104.0
+offset_top = 103.0
+offset_right = 801.0
+offset_bottom = 484.0
+theme_override_fonts/font = ExtResource("2_721jg")
+theme_override_font_sizes/font_size = 128
+text = "Моя
+   кошка
+ голодна"
+
+[node name="Start" type="Button" parent="." unique_id=922354510]
+offset_left = 123.0
+offset_top = 724.0
+offset_right = 501.0
+offset_bottom = 839.0
+theme_override_fonts/font = ExtResource("2_721jg")
+theme_override_font_sizes/font_size = 109
+text = "Начать"
+
+[node name="Exit" type="Button" parent="." unique_id=717577129]
+offset_left = 123.0
+offset_top = 866.0
+offset_right = 489.0
+offset_bottom = 981.0
+theme_override_fonts/font = ExtResource("2_721jg")
+theme_override_font_sizes/font_size = 109
+text = "Выход"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2094250725]
+stream = ExtResource("3_721jg")
+autoplay = true
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

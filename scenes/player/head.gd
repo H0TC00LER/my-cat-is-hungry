@@ -42,17 +42,15 @@ func handle_camera(direction: Vector2, delta: float, current_state: State, veloc
 	tilt()
 	
 func tilt() -> void:
-	if direction.x > 0.1:  # Движение вправо
+	if direction.x > 0.1:  
 		target_tilt = -tilt_amount
-	elif direction.x < -0.1:  # Движение влево
+	elif direction.x < -0.1:  
 		target_tilt = tilt_amount
 	else:
 		target_tilt = 0.0
 	
-	# Плавный интерполяция текущего наклона к целевому
 	current_tilt = lerp(current_tilt, target_tilt, delta * (tilt_speed if target_tilt != 0 else return_speed))
 	
-	# Применяем наклон к камере (по оси Z)
 	camera.rotation_degrees.z = current_tilt
 	
 func apply_camera_bob():
@@ -73,7 +71,6 @@ func bob(speed: float, intensity: float, delta: float) -> void:
 		0
 	)
 	camera.transform.origin = camera.transform.origin.lerp(bob_offset, delta * 10)
-	#camera.transform.origin = bob_offset
 	
 func apply_landing_shake() -> void:
 	pass
