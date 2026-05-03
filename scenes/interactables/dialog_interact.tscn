@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://s4xs40frmvu0"]
+
+[ext_resource type="Script" uid="uid://cmhwurek2fmir" path="res://scenes/interactables/dialog_interact.gd" id="1_1k4rb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4nfvc"]
+
+[node name="DialogInteract" type="Area3D" unique_id=1946729597]
+script = ExtResource("1_1k4rb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=38556221]
+shape = SubResource("BoxShape3D_4nfvc")

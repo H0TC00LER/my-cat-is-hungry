@@ -20,13 +20,13 @@
 [ext_resource type="PackedScene" uid="uid://bd7fgjofnu4na" path="res://assets/props/clock/clock.glb" id="15_oix75"]
 [ext_resource type="PackedScene" uid="uid://li7ldtldfi0m" path="res://scenes/items/other/axe.tscn" id="15_y56qp"]
 [ext_resource type="LightmapGIData" uid="uid://dvk1rsoiohdp7" path="res://scenes/levels/main.lmbake" id="17_7exfm"]
+[ext_resource type="PackedScene" uid="uid://s4xs40frmvu0" path="res://scenes/interactables/dialog_interact.tscn" id="18_8w8he"]
 [ext_resource type="PackedScene" uid="uid://bwgo68kcfsbnl" path="res://scenes/items/other/scanner.tscn" id="18_qgoyv"]
+[ext_resource type="PackedScene" uid="uid://bw5ey52dionms" path="res://scenes/interactables/bed.tscn" id="20_8w8he"]
 [ext_resource type="PackedScene" uid="uid://db8o8pmwonh4j" path="res://assets/food/rat/rat.glb" id="20_xgklb"]
-[ext_resource type="PackedScene" uid="uid://dtgfm7ud8cd8" path="res://assets/props/sink_bath/sink_bath.glb" id="23_ykry0"]
 [ext_resource type="PackedScene" uid="uid://c4pwmmt3glur4" path="res://assets/props/mirror/mirror.glb" id="24_im81g"]
 [ext_resource type="PackedScene" uid="uid://csgu738jx0ps0" path="res://assets/props/toilet/toilet.glb" id="25_ysjpo"]
 [ext_resource type="PackedScene" uid="uid://ddo81y7hgtbnr" path="res://assets/props/bath/bath.glb" id="26_gexqn"]
-[ext_resource type="PackedScene" uid="uid://1f174i0l1eyh" path="res://assets/props/bed/bed.glb" id="27_kc8j3"]
 [ext_resource type="PackedScene" uid="uid://ct3mjr4iwtfmy" path="res://assets/props/trapdoor/trapdoor.glb" id="28_e5eww"]
 [ext_resource type="PackedScene" uid="uid://bilgxprpi3rie" path="res://assets/props/pc/pc.glb" id="29_8qayg"]
 [ext_resource type="PackedScene" uid="uid://2tpihk5nrfvm" path="res://assets/props/battery/battery.glb" id="29_x2df8"]
@@ -34,7 +34,9 @@
 [ext_resource type="PackedScene" uid="uid://drwkgsrsspn22" path="res://assets/props/window/window.glb" id="30_tts5y"]
 [ext_resource type="PackedScene" uid="uid://co4ymbf0ol1b4" path="res://assets/props/table lamp/table_lamp.glb" id="31_oix75"]
 [ext_resource type="PackedScene" uid="uid://csfhon05st5p6" path="res://assets/props/carpet/carpet.glb" id="31_sy51j"]
+[ext_resource type="PackedScene" uid="uid://hhaymafp7y7l" path="res://scenes/interactables/bath_sink.tscn" id="31_vw7vg"]
 [ext_resource type="PackedScene" uid="uid://bj83wnccx7ser" path="res://assets/props/sofa/sofa.glb" id="32_gvp5n"]
+[ext_resource type="PackedScene" uid="uid://djwenfoj51i4o" path="res://assets/props/bookshelf_small/bookshelf_small.glb" id="33_cvmpn"]
 [ext_resource type="PackedScene" uid="uid://ytel3qof1kpf" path="res://assets/props/chair/chair.glb" id="34_masl8"]
 [ext_resource type="PackedScene" uid="uid://cvin5j77kiuby" path="res://scenes/interactables/carpet.tscn" id="35_2qtp0"]
 [ext_resource type="Texture2D" uid="uid://dqp8k6j8l0cgr" path="res://assets/food/tesseract/tesseract_CubeUV.png" id="35_yb600"]
@@ -47,8 +49,13 @@
 [ext_resource type="PackedScene" uid="uid://c1milolotb4l" path="res://assets/food/mnogonoshka/mnogonozhka.glb" id="42_pr7vu"]
 [ext_resource type="Texture2D" uid="uid://dtl35ss7qyb5g" path="res://assets/food/empiness/emptiness_emptiness_mat.png" id="43_pj1a6"]
 [ext_resource type="PackedScene" uid="uid://dm17qi3g83uux" path="res://assets/food/mold/mold.glb" id="43_y05oo"]
+[ext_resource type="PackedScene" uid="uid://bbeh5duox6ggk" path="res://assets/food/steklovata/steklovata.glb" id="44_4dllw"]
 [ext_resource type="PackedScene" uid="uid://qckt3furekt0" path="res://assets/food/uranium/uranium.glb" id="44_lk2ds"]
+[ext_resource type="PackedScene" uid="uid://dlxatccw2b0a" path="res://assets/food/shampoo/shampoo.glb" id="45_jt1ke"]
 [ext_resource type="PackedScene" uid="uid://bkwbwiv5phvte" path="res://assets/food/mushroom/mushroom.glb" id="45_ukbqq"]
+[ext_resource type="PackedScene" uid="uid://b0f2ch3weyfeo" path="res://assets/food/holy_water/holy_water.glb" id="46_y2451"]
+[ext_resource type="PackedScene" uid="uid://chpm5oo601m5c" path="res://assets/food/eye/eye.glb" id="47_vw7vg"]
+[ext_resource type="PackedScene" uid="uid://dyw3sdvgd4w7y" path="res://scenes/interactables/dialog_trigger.tscn" id="53_olgwj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72ix8"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -412,6 +419,9 @@ shadow_mesh = SubResource("ArrayMesh_jlsg1")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tn20o"]
 data = PackedVector3Array(6.249996, -1.5, 1.75, 6.750004, -1.5, -1.25, 6.249996, -1.5, -1.7500095, 6.249996, -1.5, 1.75, 6.750004, -1.5, 1.75, 6.750004, -1.5, -1.25, -11.750004, -1.5, 5.24999, 2.2500038, -1.5, 5.75, 2.2500038, -1.5, 5.24999, -11.750004, -1.5, 5.24999, -11.249996, -1.5, 5.75, 2.2500038, -1.5, 5.75, -11.249996, 1.5, 5.75, 2.2500038, 1.5, 5.24999, 2.2500038, 1.5, 5.75, -11.249996, 1.5, 5.75, -11.750004, 1.5, 5.24999, 2.2500038, 1.5, 5.24999, 11.249996, 1.5, -5.2499905, 11.750004, 1.5, -1.25, 11.249996, 1.5, -1.7500095, 11.249996, 1.5, -5.2499905, 11.750004, 1.5, -5.75, 11.750004, 1.5, -1.25, -11.749996, 1.5, 1.75001, 1.7500038, 1.5, 1.25, 2.2500114, 1.5, 1.75001, -11.749996, 1.5, 1.75001, -11.249996, 1.5, 1.25, 1.7500038, 1.5, 1.25, 6.249996, -1.5, 5.24999, 6.750004, -1.5, 1.75, 6.249996, -1.5, 1.75, 6.249996, -1.5, 5.24999, 6.750004, -1.5, 5.75, 6.750004, -1.5, 1.75, 6.750004, 1.5, 5.75, 6.249996, 1.5, 1.75, 6.750004, 1.5, 1.75, 6.750004, 1.5, 5.75, 6.249996, 1.5, 5.24999, 6.249996, 1.5, 1.75, 2.2500038, 1.5, 5.75, 6.249996, 1.5, 5.24999, 6.750004, 1.5, 5.75, 2.2500038, 1.5, 5.75, 2.2500038, 1.5, 5.24999, 6.249996, 1.5, 5.24999, 6.750004, -1.5, 5.75, 2.2500038, -1.5, 5.24999, 2.2500038, -1.5, 5.75, 6.750004, -1.5, 5.75, 6.249996, -1.5, 5.24999, 2.2500038, -1.5, 5.24999, 1.7500038, -1.5, -5.75, 6.250004, -1.5, -5.2499905, 6.250004, -1.5, -5.75, 1.7500038, -1.5, -5.75, 2.2500114, -1.5, -5.2499905, 6.250004, -1.5, -5.2499905, 6.250004, 1.5, -5.75, 2.2500114, 1.5, -5.2499905, 1.7500038, 1.5, -5.75, 6.250004, 1.5, -5.75, 6.250004, 1.5, -5.2499905, 2.2500114, 1.5, -5.2499905, 2.2500114, 1.5, 1.75001, 1.7500038, 1.5, -5.75, 2.2500114, 1.5, -5.2499905, 2.2500114, 1.5, 1.75001, 1.7500038, 1.5, 1.25, 1.7500038, 1.5, -5.75, 6.249996, 1.5, -1.7500095, 6.750004, 1.5, 1.75, 6.249996, 1.5, 1.75, 6.249996, 1.5, -1.7500095, 6.750004, 1.5, -1.25, 6.750004, 1.5, 1.75, 1.7500038, -1.5, 1.25, 2.2500114, -1.5, -5.2499905, 1.7500038, -1.5, -5.75, 1.7500038, -1.5, 1.25, 2.2500114, -1.5, 1.75001, 2.2500114, -1.5, -5.2499905, 11.249996, -1.5, -1.7500095, 11.750004, -1.5, -5.75, 11.249996, -1.5, -5.2499905, 11.249996, -1.5, -1.7500095, 11.750004, -1.5, -1.25, 11.750004, -1.5, -5.75, 6.250004, 1.5, -5.2499905, 11.750004, 1.5, -5.75, 11.249996, 1.5, -5.2499905, 6.250004, 1.5, -5.2499905, 6.250004, 1.5, -5.75, 11.750004, 1.5, -5.75, 11.249996, 1.5, -1.7500095, 6.750004, 1.5, -1.25, 6.249996, 1.5, -1.7500095, 11.249996, 1.5, -1.7500095, 11.750004, 1.5, -1.25, 6.750004, 1.5, -1.25, 6.249996, -1.5, -1.7500095, 11.750004, -1.5, -1.25, 11.249996, -1.5, -1.7500095, 6.249996, -1.5, -1.7500095, 6.750004, -1.5, -1.25, 11.750004, -1.5, -1.25, 11.249996, -1.5, -5.2499905, 6.250004, -1.5, -5.75, 6.250004, -1.5, -5.2499905, 11.249996, -1.5, -5.2499905, 11.750004, -1.5, -5.75, 6.250004, -1.5, -5.75, 6.249996, -1.5, 5.24999, 2.2500038, 1.5, 5.24999, 2.2500038, -1.5, 5.24999, 6.249996, -1.5, 5.24999, 6.249996, 1.5, 5.24999, 2.2500038, 1.5, 5.24999, 6.750004, -1.5, 5.75, 2.2500038, 1.5, 5.75, 6.750004, 1.5, 5.75, 6.750004, -1.5, 5.75, 2.2500038, -1.5, 5.75, 2.2500038, 1.5, 5.75, -11.750004, -1.5, 5.24999, 2.2500038, 1.5, 5.24999, -11.750004, 1.5, 5.24999, -11.750004, -1.5, 5.24999, 2.2500038, -1.5, 5.24999, 2.2500038, 1.5, 5.24999, -11.249996, -1.5, 5.75, 2.2500038, 1.5, 5.75, 2.2500038, -1.5, 5.75, -11.249996, -1.5, 5.75, -11.249996, 1.5, 5.75, 2.2500038, 1.5, 5.75, 6.249996, 1.5, 1.75, 6.249996, -1.5, 5.24999, 6.249996, -1.5, 1.75, 6.249996, 1.5, 1.75, 6.249996, 1.5, 5.24999, 6.249996, -1.5, 5.24999, 6.750004, 1.5, 1.75, 6.750004, -1.5, 5.75, 6.750004, 1.5, 5.75, 6.750004, 1.5, 1.75, 6.750004, -1.5, 1.75, 6.750004, -1.5, 5.75, 11.249996, 1.5, -5.2499905, 6.250004, -1.5, -5.2499905, 6.250004, 1.5, -5.2499905, 11.249996, 1.5, -5.2499905, 11.249996, -1.5, -5.2499905, 6.250004, -1.5, -5.2499905, 11.750004, 1.5, -5.75, 6.250004, -1.5, -5.75, 11.750004, -1.5, -5.75, 11.750004, 1.5, -5.75, 6.250004, 1.5, -5.75, 6.250004, -1.5, -5.75, 6.249996, -1.5, -1.7500095, 6.249996, 1.5, 1.75, 6.249996, -1.5, 1.75, 6.249996, -1.5, -1.7500095, 6.249996, 1.5, -1.7500095, 6.249996, 1.5, 1.75, 6.750004, -1.5, -1.25, 6.750004, 1.5, 1.75, 6.750004, 1.5, -1.25, 6.750004, -1.5, -1.25, 6.750004, -1.5, 1.75, 6.750004, 1.5, 1.75, 6.250004, 1.5, -5.2499905, 2.2500114, -1.5, -5.2499905, 2.2500114, 1.5, -5.2499905, 6.250004, 1.5, -5.2499905, 6.250004, -1.5, -5.2499905, 2.2500114, -1.5, -5.2499905, 6.250004, 1.5, -5.75, 1.7500038, -1.5, -5.75, 6.250004, -1.5, -5.75, 6.250004, 1.5, -5.75, 1.7500038, 1.5, -5.75, 1.7500038, -1.5, -5.75, 2.2500114, 1.5, -5.2499905, 2.2500114, -1.5, 1.75001, 2.2500114, 1.5, 1.75001, 2.2500114, 1.5, -5.2499905, 2.2500114, -1.5, -5.2499905, 2.2500114, -1.5, 1.75001, 1.7500038, 1.5, -5.75, 1.7500038, -1.5, 1.25, 1.7500038, -1.5, -5.75, 1.7500038, 1.5, -5.75, 1.7500038, 1.5, 1.25, 1.7500038, -1.5, 1.25, 11.249996, -1.5, -5.2499905, 11.249996, 1.5, -1.7500095, 11.249996, -1.5, -1.7500095, 11.249996, -1.5, -5.2499905, 11.249996, 1.5, -5.2499905, 11.249996, 1.5, -1.7500095, 11.750004, -1.5, -5.75, 11.750004, 1.5, -1.25, 11.750004, 1.5, -5.75, 11.750004, -1.5, -5.75, 11.750004, -1.5, -1.25, 11.750004, 1.5, -1.25, 11.249996, -1.5, -1.7500095, 6.249996, 1.5, -1.7500095, 6.249996, -1.5, -1.7500095, 11.249996, -1.5, -1.7500095, 11.249996, 1.5, -1.7500095, 6.249996, 1.5, -1.7500095, 11.750004, -1.5, -1.25, 6.750004, 1.5, -1.25, 11.750004, 1.5, -1.25, 11.750004, -1.5, -1.25, 6.750004, -1.5, -1.25, 6.750004, 1.5, -1.25, 1.7500038, 1.5, 1.25, -11.249996, -1.5, 1.25, 1.7500038, -1.5, 1.25, 1.7500038, 1.5, 1.25, -11.249996, 1.5, 1.25, -11.249996, -1.5, 1.25, 2.2500114, 1.5, 1.75001, -11.749996, -1.5, 1.75001, -11.749996, 1.5, 1.75001, 2.2500114, 1.5, 1.75001, 2.2500114, -1.5, 1.75001, -11.749996, -1.5, 1.75001, 2.2500114, -1.5, 1.75001, -11.249996, -1.5, 1.25, -11.749996, -1.5, 1.75001, 2.2500114, -1.5, 1.75001, 1.7500038, -1.5, 1.25, -11.249996, -1.5, 1.25)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_olgwj"]
+size = Vector3(1, 1, 0.7397461)
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_sy51j"]
 radius = 0.542
 height = 2.502
@@ -492,6 +502,12 @@ height = 0.56243896
 height = 0.101257324
 radius = 0.1274414
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_jt1ke"]
+size = Vector3(0.41723633, 0.39001465, 0.3388672)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jhdis"]
+size = Vector3(0.33984375, 0.5477295, 0.22009277)
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y05oo"]
 radius = 0.12207031
 height = 0.9284668
@@ -545,8 +561,15 @@ height = 1.1171875
 radius = 0.1459961
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_y2451"]
-height = 0.2962036
-radius = 0.18164063
+height = 0.22232056
+radius = 0.14404297
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vw7vg"]
+height = 0.43676758
+radius = 0.100097656
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8w8he"]
+radius = 0.12803693
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y05oo"]
 size = Vector3(0.18634033, 1.0461426, 0.9963379)
@@ -693,19 +716,31 @@ transform = Transform3D(-4.9525003e-08, 0, 1.133, 0, 1.133, 0, -1.133, 0, -4.952
 [node name="clock" parent="World" unique_id=865812331 instance=ExtResource("15_oix75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.633013, 0.39302713, -6.520801)
 
-[node name="sink_bath" parent="World" unique_id=2103730799 instance=ExtResource("23_ykry0")]
-transform = Transform3D(-0.652, 0, 9.844926e-08, 0, 0.652, 0, -9.844926e-08, 0, -0.652, -25.421217, -0.8414464, -1.6384748)
-
 [node name="mirror" parent="World" unique_id=602116729 instance=ExtResource("24_im81g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.406942, 0.27602094, -2.0696094)
+
+[node name="DialogInteract" parent="World/mirror" unique_id=1946729597 instance=ExtResource("18_8w8he")]
+transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 0, 0, 0)
+text = Array[String](["Хорошо, что зеркало разбито."])
+
+[node name="CollisionShape3D" parent="World/mirror/DialogInteract" index="0" unique_id=38556221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.13012695)
+shape = SubResource("BoxShape3D_olgwj")
 
 [node name="toilet" parent="World" unique_id=1362994956 instance=ExtResource("25_ysjpo")]
 transform = Transform3D(-3.409488e-08, 0, -0.78, 0, 0.78, 0, 0.78, 0, -3.409488e-08, -23.817225, -0.9812243, 0.74745274)
 
+[node name="DialogInteract" parent="World/toilet" unique_id=882465525 instance=ExtResource("18_8w8he")]
+transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 0, 0, 0)
+text = Array[String](["Трон для раздумий."])
+
+[node name="toilet2" parent="World" unique_id=771236172 instance=ExtResource("25_ysjpo")]
+transform = Transform3D(-3.409488e-08, 0, -0.78, 0, 0.78, 0, 0.78, 0, -3.409488e-08, -0.40541077, -0.9812243, -7.432755)
+
 [node name="bath" parent="World" unique_id=743928985 instance=ExtResource("26_gexqn")]
 transform = Transform3D(0.447, 0, 0, 0, 0.447, 0, 0, 0, 0.447, -23.933222, -1.0522267, -0.9939458)
 
-[node name="bed" parent="World" unique_id=26560457 instance=ExtResource("27_kc8j3")]
+[node name="Bed" parent="World" unique_id=1799893461 instance=ExtResource("20_8w8he")]
 transform = Transform3D(-3.5887048e-08, 0, 0.821, 0, 0.821, 0, -0.821, 0, -3.5887048e-08, -34.12256, -0.85821676, -0.593061)
 
 [node name="table" parent="World" unique_id=1965138254 instance=ExtResource("7_vkq25")]
@@ -741,7 +776,7 @@ mesh = SubResource("CapsuleMesh_sy51j")
 surface_material_override/0 = SubResource("StandardMaterial3D_sy51j")
 
 [node name="sofa" parent="World" unique_id=1539817166 instance=ExtResource("32_gvp5n")]
-transform = Transform3D(-0.45608386, 0, 0.45608386, 0, 0.645, 0, -0.45608386, 0, -0.45608386, -30.312786, -0.96573627, -3.406773)
+transform = Transform3D(-0.645, 0, 0, 0, 0.64500004, 0, 0, 0, -0.645, -30.443443, -0.96573627, -2.8562663)
 
 [node name="chair" parent="World" unique_id=1932563568 instance=ExtResource("34_masl8")]
 transform = Transform3D(-0.40200007, 0, -0.6962844, 0, 0.804, 0, 0.6962844, 0, -0.40200007, -39.54661, -0.83777636, -3.461418)
@@ -782,43 +817,65 @@ transform = Transform3D(1.6891892, 0, 0, 0, 1.6891892, 0, 0, 0, 1.6891892, -0.50
 light_energy = 0.464
 light_specular = 0.0
 light_bake_mode = 1
-shadow_enabled = true
-omni_range = 199.679
+omni_range = 9.929
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="World/window2" unique_id=1452565378]
 transform = Transform3D(1.6891892, 0, 0, 0, 1.6891892, 0, 0, 0, 1.6891892, 0.4955001, -0.37835175, -0.10555935)
 light_energy = 0.464
 light_specular = 0.0
 light_bake_mode = 1
-shadow_enabled = true
-omni_range = 199.679
+omni_range = 9.929
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="World/window2" unique_id=888283979]
 transform = Transform3D(1.6891892, 0, 0, 0, 1.6891892, 0, 0, 0, 1.6891892, 0.4322281, 0.34513122, -0.10555935)
 light_energy = 0.464
 light_specular = 0.0
 light_bake_mode = 1
-shadow_enabled = true
-omni_range = 199.679
+omni_range = 9.929
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="World/window2" unique_id=1719420332]
 transform = Transform3D(1.6891892, 0, 0, 0, 1.6891892, 0, 0, 0, 1.6891892, -0.49736214, 0.34513122, -0.10555935)
 light_energy = 0.464
 light_specular = 0.0
 light_bake_mode = 1
-shadow_enabled = true
-omni_range = 199.679
+omni_range = 9.929
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="World/window2" unique_id=1734424061]
 transform = Transform3D(1.6891892, 0, 0, 0, 1.6891892, 0, 0, 0, 1.6891892, 0.5905638, -0.858998, -0.10555935)
 light_energy = 0.464
 light_specular = 0.0
 light_bake_mode = 1
-shadow_enabled = true
-omni_range = 199.679
+omni_range = 9.929
 
 [node name="window3" parent="World" unique_id=647187367 instance=ExtResource("30_tts5y")]
 transform = Transform3D(0.592, 0, 0, 0, 0.592, 0, 0, 0, 0.592, -36.151035, 0.1149776, -6.9744563)
+
+[node name="BathSink" parent="World" unique_id=2036813958 instance=ExtResource("31_vw7vg")]
+transform = Transform3D(-0.67499995, 0, 7.4505806e-08, 0, 0.675, 0, -7.4505806e-08, 0, -0.67499995, -25.388285, -0.69266653, -1.5314591)
+
+[node name="bookshelf_small" parent="World" unique_id=893138261 instance=ExtResource("33_cvmpn")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -34.998024, -0.97144365, -2.576486)
+
+[node name="table_lamp2" parent="World" unique_id=1663762439 instance=ExtResource("31_oix75")]
+transform = Transform3D(-0.6034028, 0, -0.7974366, 0, 1, 0, 0.7974366, 0, -0.6034028, -33.286114, 0.019266546, -2.6085114)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/table_lamp2" unique_id=1592847330]
+transform = Transform3D(-4.3950075e-09, 0.153, -8.556971e-09, -0.14778665, -6.4599597e-09, -0.039599337, -0.039599337, 7.1278867e-09, 0.14778665, -0.001128614, 0.24643674, 0.26421666)
+mesh = SubResource("CapsuleMesh_sy51j")
+surface_material_override/0 = SubResource("StandardMaterial3D_sy51j")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="World/table_lamp2" unique_id=1304546736]
+transform = Transform3D(-0.9593533, 2.9802322e-08, -0.28220758, -0.25486046, 0.42943957, 0.8663878, 0.121191084, 0.9030955, -0.41198424, 0.023641944, 0.14745167, 0.2834518)
+light_color = Color(0.8694807, 0.57518274, 0.04959985, 1)
+light_energy = 2.0
+light_indirect_energy = 16.0
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 32.282
+spot_angle = 63.09
+
+[node name="bookshelf_small2" parent="World" unique_id=1798369229 instance=ExtResource("33_cvmpn")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -33.24808, -0.97144365, -2.576486)
 
 [node name="Axe" parent="." unique_id=1458729620 instance=ExtResource("15_y56qp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.670555, 0, -3.9354239)
@@ -834,7 +891,7 @@ generate_probes_subdiv = 4
 light_data = ExtResource("17_7exfm")
 
 [node name="Scanner" parent="." unique_id=9637067 instance=ExtResource("18_qgoyv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.0829988)
+transform = Transform3D(-3.090862e-08, 0.7071068, -0.7071067, -1, -4.371139e-08, 0, -3.090862e-08, 0.7071067, 0.7071068, -2.5088277, -0.33164996, -2.5428653)
 
 [node name="Food" type="Node3D" parent="." unique_id=214219898]
 metadata/_edit_lock_ = true
@@ -926,8 +983,32 @@ shape = SubResource("CylinderShape3D_pr7vu")
 
 [node name="souvenir" parent="Food/Souvenir" unique_id=713929135 instance=ExtResource("41_l8wfg")]
 
+[node name="Steklovata" parent="Food" unique_id=1399600898 instance=ExtResource("4_j4d2a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4461226, 0.042489618, -4.321263)
+delta_radioactivity = 15
+delta_holiness = 15
+delta_esotericity = 15
+
+[node name="CollisionShape3D" parent="Food/Steklovata" index="0" unique_id=1620734247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032470226, 0.01071164, -0.009498119)
+shape = SubResource("BoxShape3D_jt1ke")
+
+[node name="steklovata" parent="Food/Steklovata" unique_id=365249349 instance=ExtResource("44_4dllw")]
+
+[node name="Shampoo" parent="Food" unique_id=503737238 instance=ExtResource("4_j4d2a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4461226, 0.042489618, -5.031885)
+delta_radioactivity = 35
+delta_holiness = 35
+delta_esotericity = 35
+
+[node name="CollisionShape3D" parent="Food/Shampoo" index="0" unique_id=1620734247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00024366379, 0.03652951, 8.440018e-05)
+shape = SubResource("BoxShape3D_jhdis")
+
+[node name="shampoo" parent="Food/Shampoo" unique_id=1401184322 instance=ExtResource("45_jt1ke")]
+
 [node name="Mnogonozhka" parent="Food" unique_id=459926062 instance=ExtResource("4_j4d2a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.190732, -1.4201741, -6.7553654)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.190732, -1.4201741, -6.3488393)
 delta_radioactivity = 35
 delta_esotericity = 15
 
@@ -972,13 +1053,37 @@ light_energy = 0.5
 
 [node name="Mushroom" parent="Food" unique_id=790945642 instance=ExtResource("4_j4d2a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6540437, -0.9440049, -4.275367)
-delta_radioactivity = 50
+delta_radioactivity = 15
+delta_holiness = 15
+delta_esotericity = 15
 
 [node name="CollisionShape3D" parent="Food/Mushroom" index="0" unique_id=1620734247]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0036616325, 0.13500977, 0.010674477)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0036616325, 0.09806824, 0.010674477)
 shape = SubResource("CylinderShape3D_y2451")
 
 [node name="mushroom" parent="Food/Mushroom" unique_id=1092297278 instance=ExtResource("45_ukbqq")]
+
+[node name="HolyWater" parent="Food" unique_id=705049853 instance=ExtResource("4_j4d2a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6540437, -0.9440049, -3.6138034)
+delta_holiness = 50
+
+[node name="CollisionShape3D" parent="Food/HolyWater" index="0" unique_id=1620734247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0036616325, 0.020065308, 0.010674477)
+shape = SubResource("CylinderShape3D_vw7vg")
+
+[node name="holy_water" parent="Food/HolyWater" unique_id=1934654804 instance=ExtResource("46_y2451")]
+
+[node name="Eye" parent="Food" unique_id=1815912163 instance=ExtResource("4_j4d2a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1450176, -0.9440049, -3.6138034)
+delta_radioactivity = 15
+delta_holiness = 15
+delta_esotericity = 15
+
+[node name="CollisionShape3D" parent="Food/Eye" index="0" unique_id=1620734247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0036616325, 0.020065308, 0.010674477)
+shape = SubResource("SphereShape3D_8w8he")
+
+[node name="eye" parent="Food/Eye" unique_id=419490677 instance=ExtResource("47_vw7vg")]
 
 [node name="Mold" parent="Food" unique_id=1513865826 instance=ExtResource("4_j4d2a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.090245, -1.3924407, -6.263715)
@@ -1007,7 +1112,6 @@ light_color = Color(0.94509804, 0.6431373, 0.07450981, 1)
 light_energy = 12.0
 light_specular = 0.0
 light_bake_mode = 1
-shadow_enabled = true
 spot_angle = 56.14
 
 [node name="env_lamp2" parent="Lighting" unique_id=1416419726 instance=ExtResource("38_yb600")]
@@ -1016,16 +1120,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8995991, 1.0853, -4.239676
 [node name="OmniLight3D" type="SpotLight3D" parent="Lighting/env_lamp2" unique_id=1574129871]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.20645773, 0)
 light_color = Color(0.94509804, 0.6431373, 0.07450981, 1)
-light_energy = 12.0
+light_energy = 0.0
 light_specular = 0.0
 light_bake_mode = 1
-shadow_enabled = true
 spot_angle = 56.14
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Lighting/env_lamp2" unique_id=67203765]
-transform = Transform3D(-0.14778663, -2.4977872e-08, -0.03959934, 2.3102357e-08, -0.153, 1.0287913e-08, -0.03959934, 3.9580255e-09, 0.14778663, -0.0011286736, -0.18362194, -0.0019359589)
-mesh = SubResource("CapsuleMesh_yb600")
-surface_material_override/0 = SubResource("StandardMaterial3D_sy51j")
 
 [node name="env_lamp4" parent="Lighting" unique_id=884897673 instance=ExtResource("38_yb600")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9249563, 1.0853, 5.118787)
@@ -1036,7 +1134,6 @@ light_color = Color(0.94509804, 0.6431373, 0.07450981, 1)
 light_energy = 12.0
 light_specular = 0.0
 light_bake_mode = 1
-shadow_enabled = true
 spot_angle = 56.14
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Lighting/env_lamp4" unique_id=674158347]
@@ -1053,7 +1150,6 @@ light_color = Color(0.94509804, 0.6431373, 0.07450981, 1)
 light_energy = 12.0
 light_specular = 0.0
 light_bake_mode = 1
-shadow_enabled = true
 spot_angle = 56.14
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Lighting/env_lamp5" unique_id=1620641594]
@@ -1070,10 +1166,57 @@ light_color = Color(0.94509804, 0.6431373, 0.07450981, 1)
 light_energy = 12.0
 light_specular = 0.0
 light_bake_mode = 1
-shadow_enabled = true
 spot_angle = 56.14
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Lighting/env_lamp7" unique_id=935938815]
+transform = Transform3D(-0.14778663, -2.4977872e-08, -0.03959934, 2.3102357e-08, -0.153, 1.0287913e-08, -0.03959934, 3.9580255e-09, 0.14778663, -0.0011286736, -0.18362194, -0.0019359589)
+mesh = SubResource("CapsuleMesh_yb600")
+surface_material_override/0 = SubResource("StandardMaterial3D_sy51j")
+
+[node name="env_lamp8" parent="Lighting" unique_id=767857605 instance=ExtResource("38_yb600")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.761871, 1.0853, -7.4783816)
+
+[node name="OmniLight3D" type="SpotLight3D" parent="Lighting/env_lamp8" unique_id=63406304]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.20645773, 0)
+light_color = Color(0.94509804, 0.6431373, 0.07450981, 1)
+light_energy = 12.0
+light_specular = 0.0
+light_bake_mode = 1
+spot_angle = 56.14
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Lighting/env_lamp8" unique_id=1743979406]
+transform = Transform3D(-0.14778663, -2.4977872e-08, -0.03959934, 2.3102357e-08, -0.153, 1.0287913e-08, -0.03959934, 3.9580255e-09, 0.14778663, -0.0011286736, -0.18362194, -0.0019359589)
+mesh = SubResource("CapsuleMesh_yb600")
+surface_material_override/0 = SubResource("StandardMaterial3D_sy51j")
+
+[node name="env_lamp9" parent="Lighting" unique_id=1843593598 instance=ExtResource("38_yb600")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.338638, 1.0853, -7.4783816)
+
+[node name="OmniLight3D" type="SpotLight3D" parent="Lighting/env_lamp9" unique_id=1710532281]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.20645773, 0)
+light_color = Color(0.94509804, 0.6431373, 0.07450981, 1)
+light_energy = 12.0
+light_specular = 0.0
+light_bake_mode = 1
+spot_angle = 56.14
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Lighting/env_lamp9" unique_id=2037368656]
+transform = Transform3D(-0.14778663, -2.4977872e-08, -0.03959934, 2.3102357e-08, -0.153, 1.0287913e-08, -0.03959934, 3.9580255e-09, 0.14778663, -0.0011286736, -0.18362194, -0.0019359589)
+mesh = SubResource("CapsuleMesh_yb600")
+surface_material_override/0 = SubResource("StandardMaterial3D_sy51j")
+
+[node name="env_lamp10" parent="Lighting" unique_id=276982787 instance=ExtResource("38_yb600")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.338638, 1.0853, -0.47722483)
+
+[node name="OmniLight3D" type="SpotLight3D" parent="Lighting/env_lamp10" unique_id=616305113]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.20645773, 0)
+light_color = Color(0.94509804, 0.6431373, 0.07450981, 1)
+light_energy = 12.0
+light_specular = 0.0
+light_bake_mode = 1
+spot_angle = 56.14
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Lighting/env_lamp10" unique_id=403771636]
 transform = Transform3D(-0.14778663, -2.4977872e-08, -0.03959934, 2.3102357e-08, -0.153, 1.0287913e-08, -0.03959934, 3.9580255e-09, 0.14778663, -0.0011286736, -0.18362194, -0.0019359589)
 mesh = SubResource("CapsuleMesh_yb600")
 surface_material_override/0 = SubResource("StandardMaterial3D_sy51j")
@@ -1087,7 +1230,6 @@ light_color = Color(0.67954504, 0.7485923, 0.49038416, 1)
 light_energy = 16.0
 light_specular = 0.0
 light_bake_mode = 1
-shadow_enabled = true
 spot_angle = 47.79
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Lighting" unique_id=1441301593]
@@ -1100,17 +1242,35 @@ shadow_enabled = true
 spot_range = 32.282
 spot_angle = 63.09
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Lighting" unique_id=699427248]
+transform = Transform3D(-0.14778663, -2.4977872e-08, -0.03959934, 2.3102357e-08, -0.153, 1.0287913e-08, -0.03959934, 3.9580255e-09, 0.14778663, -7.118498, 0.87723523, -4.2375355)
+mesh = SubResource("CapsuleMesh_yb600")
+surface_material_override/0 = SubResource("StandardMaterial3D_sy51j")
+
 [node name="ExitDoor" parent="." unique_id=2122587927 instance=ExtResource("40_w31o2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0759654, -1.6396677, 6.868374)
 
+[node name="DialogTrigger" parent="." unique_id=1764451476 instance=ExtResource("53_olgwj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1330657, 0, -4.483129)
+text = Array[String](["Я могу использовать сканнер, чтобы читать описание еды и ее влияние на Мусю..", "Я нашел его в подвале вместе с кучей других странных вещей, но теперь чертов подвал не открывается."])
+
+[node name="CollisionShape3D" parent="DialogTrigger" index="0" unique_id=1444528411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23365784)
+
+[editable path="World/mirror/DialogInteract"]
 [editable path="Food/Tesseract"]
 [editable path="Food/Rat"]
 [editable path="Food/Eastercake"]
 [editable path="Food/Meat"]
 [editable path="Food/HolyRadGrenade"]
 [editable path="Food/Souvenir"]
+[editable path="Food/Steklovata"]
+[editable path="Food/Shampoo"]
 [editable path="Food/Mnogonozhka"]
 [editable path="Food/Emptiness"]
 [editable path="Food/Uranium"]
 [editable path="Food/Mushroom"]
+[editable path="Food/HolyWater"]
+[editable path="Food/Eye"]
 [editable path="Food/Mold"]
+[editable path="DialogTrigger"]

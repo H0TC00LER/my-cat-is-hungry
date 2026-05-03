@@ -10,7 +10,7 @@ var player: Player
 func _ready() -> void:
 	await get_tree().process_frame
 	player = get_tree().get_first_node_in_group("player")
-	#next_event()
+	next_event()
 	FadeScreen.fade_in()
 	
 
@@ -24,28 +24,34 @@ var base_events_array: Array = ["wake_up",
 
 var days: Array = [
 	{
-		"wake_up_dialog": ["Доброе утро!", "День первый. Покорми кота."],
-		"sleep_dialog": [""],
+		"wake_up_dialog": ["Я сегодня снова проспал большую часть дня.", "Муся наверное проголодалась. Надо ее покормить.", "Но, надо сначала привести себя в порядок.
+."],
+		"sleep_dialog": ["Все не могу. Опять устал. Надо, чтобы Муся впитала пищу.", "Посмотрим, что будет завтра
+."],
 		"events": base_events_array
 	},
 	{
-		"wake_up_dialog": ["Снова утро...", "Кот опять голодный."],
-		"sleep_dialog": [""],
+		"wake_up_dialog": ["Голова гудит. Все как будто в тумане.", "Интересно, что там с Мусей.", "Надо продолжить эксперименты
+."],
+		"sleep_dialog": ["Силы на исходе.", "Этот чертов вирус сна погубил нас всех.", "...", "Вот бы с Мусей все вышло."],
 		"events": base_events_array
 	},
 	{
-		"wake_up_dialog": ["День третий.", "Интересно, что сегодня хочет кот."],
-		"sleep_dialog": [""],
+		"wake_up_dialog": ["Снова сначала.", "Беспокойная ночь.", "Надо узнать, как отреагировала Муся на вчерашнюю кормежку.", "Надеюсь, все будет не зря.
+"],
+		"sleep_dialog": ["Кровать так и манит. С каждым днем я все меньше бодрствую.", "Утро вечера мудренее
+?"],
 		"events": base_events_array
 	},
 	{
-		"wake_up_dialog": ["Уже четвёртый день.", "Рутина..."],
-		"sleep_dialog": [""],
+		"wake_up_dialog": ["Я все ближе и ближе к финалу.", "Еще два дня экспериментов и надеюсь, все получится
+."],
+		"sleep_dialog": ["Голова... кружится... Надо... поспать..."],
 		"events": base_events_array
 	},
 	{
-		"wake_up_dialog": ["Последний день.", "Сегодня всё решится."],
-		"sleep_dialog": [""],
+		"wake_up_dialog": ["Последний день.", "Завтра всё решится."],
+		"sleep_dialog": ["Все. Завтра. Надеюсь... получится..."],
 		"events": base_events_array
 	},
 	]
@@ -67,9 +73,9 @@ func next_event() -> void:
 			DialogManager.dialog_finished.connect(next_event, CONNECT_ONE_SHOT)
 		"wash_hands_quest":
 			print("wash_hands_quest")
-			QuestUi.show_quest("- Помыть руки")
+			QuestUi.show_quest("-Помыть руки")
 		"feed_the_cat_quest":
-			QuestUi.show_quest("- Покормить кота")
+			QuestUi.show_quest("-Покормить кота")
 		"sleep":
 			player.disable()
 			FadeScreen.fade_out() 
@@ -80,6 +86,11 @@ func _on_day_finished() -> void:
 	current_day += 1
 	current_event = -1
 	next_event()
+	
+func complete_event(event_name: String) -> void:
+	if get_current_event() == event_name:
+		current_event += 1
+		next_event()
 	
 func get_current_event() -> String:
 	return days[current_day]["events"][current_event]

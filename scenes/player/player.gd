@@ -4,7 +4,10 @@ extends CharacterBody3D
 @onready var head: Head = $Head
 @onready var interaction_raycast: RayCast3D = $Head/RayCast3D
 @onready var hand: Node3D = $Head/Hand
-@onready var debug_label: Label = $DebugLabel
+@onready var debug_label: Label = $CanvasLayer/DebugLabel
+@onready var hand_cursor: TextureRect = $CanvasLayer/HandCursor
+@onready var scan_cursor: TextureRect = $CanvasLayer/ScanCursor
+
 
 var current_state = State.Walk
 var current_item: Item = null
@@ -70,6 +73,22 @@ func _physics_process(delta: float) -> void:
 	head.handle_camera(get_raw_direction(), delta, current_state, velocity)
 	
 	move_and_slide()
+	
+	if interaction_raycast.is_colliding():
+		var collider = interaction_raycast.get_collider()
+		if collider.has_method("interact"):
+			hand_cursor.visible = true
+		else:
+			hand_cursor.visible = false
+			
+		if collider is Item and current_item is Scanner:
+			hand_cursor.visible = false
+			scan_cursor.visible = true
+		else:
+			scan_cursor.visible = false
+	else:
+		hand_cursor.visible = false
+		scan_cursor.visible = false
 	
 	if current_item is Food:
 		debug_label.text = "

@@ -13,15 +13,9 @@ signal dialog_finished
 func _ready() -> void:
 	label = $ColorRect/MarginContainer/Label
 	visible = false
-	
-	#show_dialog(["дэмн!!!!?",
-	 #"шла Саша по шоссе и сосала амогус!!!",
-	 #"це кинец и т.д.",
-	 #"внимаение сотрудники гражданской обороны.
-	#Идите нахуй
-	#Конец связи"])
 
 func show_dialog(new_lines: Array) -> void:
+	await get_tree().process_frame
 	lines = new_lines
 	current_line = 0
 	visible = true
