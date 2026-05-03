@@ -38,6 +38,10 @@ func _ready() -> void:
 	FadeScreen.fade_in()
 	_update_world()
 	
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("escape"):
+		get_tree().quit()
+
 
 var base_events_array: Array = ["wake_up",
 	"wake_up_dialog",
@@ -138,6 +142,9 @@ func start_ending() -> void:
 	get_tree().change_scene_to_file("res://scenes/endings/ending.tscn")
 	
 func calculate_ending() -> void:
+	if current_day != 5:
+		ending = 0
+		return
 	if is_anime_eaten:
 		ending = 6
 		return

@@ -30,3 +30,5 @@ theme_override_constants/margin_bottom = 300
 layout_mode = 2
 texture = ExtResource("1_s7omi")
 expand_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1907024936]

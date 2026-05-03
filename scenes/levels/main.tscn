@@ -1323,12 +1323,14 @@ transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70
 delta_radioactivity = -50
 delta_holiness = -50
 delta_esotericity = 50
+description = Array[String](["Ммммм лавандовый раф, мой любимый"])
 
 [node name="CollisionShape3D" parent="Food/Coffee" index="0" unique_id=1620734247]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.036896706, -0.0064468384, 0.032128572)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.036896706, -0.0064468384, 0.032128572)
 shape = SubResource("CylinderShape3D_tsr0x")
 
 [node name="coffee" parent="Food/Coffee" unique_id=1801021479 instance=ExtResource("42_lld5j")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="HolyRadGrenade" parent="Food" unique_id=1526334565 instance=ExtResource("4_j4d2a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4461226, 0.042489618, 4.3322268)
