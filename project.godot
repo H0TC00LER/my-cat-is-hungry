@@ -25,7 +25,11 @@ SafeUi="*uid://bgeqre7xu2ss3"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/size/mode=3
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [global_group]
 
@@ -134,3 +138,4 @@ jolt_physics_3d/simulation/velocity_steps=60
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"

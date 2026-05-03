@@ -61,6 +61,8 @@ func disabled(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	if is_disabled:
 		return
+		
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	match current_state:
 		State.Walk:
