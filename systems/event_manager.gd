@@ -93,5 +93,6 @@ func enable_player() -> void:
 		player.enable()
 
 func start_ending() -> void:
+	FadeScreen.fade_in()
 	get_tree().change_scene_to_file("res://scenes/endings/ending.tscn")
 	

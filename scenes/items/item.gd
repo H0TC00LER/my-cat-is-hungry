@@ -15,6 +15,11 @@ func _ready() -> void:
 	axis_lock_angular_x = false
 	axis_lock_angular_y = false
 	axis_lock_angular_z = false  
+	
+	#var mesh_instance = get_child(1).get_child(0)
+	#if mesh_instance and mesh_instance.mesh:
+		#var shape = mesh_instance.mesh.create_convex_shape()
+		#$CollisionShape3D.shape = shape
 
 
 func interact(player: Player) -> void:

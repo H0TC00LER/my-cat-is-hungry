@@ -3,7 +3,14 @@
 [ext_resource type="Script" uid="uid://pr6gwhndeop" path="res://scenes/interactables/carpet.gd" id="1_a1khg"]
 [ext_resource type="PackedScene" uid="uid://csfhon05st5p6" path="res://assets/props/carpet/carpet.glb" id="1_ibrbk"]
 
-[node name="Carpet" type="Node3D" unique_id=547811311]
+[sub_resource type="BoxShape3D" id="BoxShape3D_a1khg"]
+size = Vector3(3.6349182, 0.14086914, 2.2253418)
+
+[node name="Carpet" type="Area3D" unique_id=1788011526]
 script = ExtResource("1_a1khg")
 
 [node name="carpet" parent="." unique_id=1492928191 instance=ExtResource("1_ibrbk")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=673235675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02268982, 0.052368164, -0.00012207031)
+shape = SubResource("BoxShape3D_a1khg")
