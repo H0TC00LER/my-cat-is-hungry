@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bvseeu40c2w3l"
+path="res://.godot/imported/муся голод 2.wav-7c897ef1296c0ca08ffd1b40b0818486.sample"
+
+[deps]
+
+source_file="res://assets/sounds/муся голод 2.wav"
+dest_files=["res://.godot/imported/муся голод 2.wav-7c897ef1296c0ca08ffd1b40b0818486.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

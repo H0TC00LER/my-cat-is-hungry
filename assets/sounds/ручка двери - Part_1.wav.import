@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ecukqcixfh28"
+path="res://.godot/imported/ручка двери - Part_1.wav-5d225b06bd8bc15d96ef7796d480731b.sample"
+
+[deps]
+
+source_file="res://assets/sounds/ручка двери - Part_1.wav"
+dest_files=["res://.godot/imported/ручка двери - Part_1.wav-5d225b06bd8bc15d96ef7796d480731b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://sthq3tnpr8ga"
+path="res://.godot/imported/вода  - Part_1.wav-1faa05fde2a7c9f581d88e8bc5c62c35.sample"
+
+[deps]
+
+source_file="res://assets/sounds/вода  - Part_1.wav"
+dest_files=["res://.godot/imported/вода  - Part_1.wav-1faa05fde2a7c9f581d88e8bc5c62c35.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

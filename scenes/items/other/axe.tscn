@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://li7ldtldfi0m"]
 
 [ext_resource type="PackedScene" uid="uid://cnx5hmktllu3u" path="res://scenes/items/item.tscn" id="1_6wg5h"]
+[ext_resource type="Script" uid="uid://bm7nwex88137k" path="res://scenes/items/other/axe.gd" id="2_fl6la"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fl6la"]
 size = Vector3(0.9545654, 0.2, 0.2)
@@ -9,6 +10,7 @@ size = Vector3(0.9545654, 0.2, 0.2)
 size = Vector3(1.12, 0.055, 0.055)
 
 [node name="Axe" unique_id=725074557 instance=ExtResource("1_6wg5h")]
+script = ExtResource("2_fl6la")
 
 [node name="CollisionShape3D" parent="." index="0" unique_id=1620734247]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
@@ -17,6 +19,3 @@ shape = SubResource("BoxShape3D_fl6la")
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="1" unique_id=1068856217]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_8wwxj")
-
-[node name="MeshInstance3D" parent="." index="2" unique_id=422873377]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4711833, 0, 0)

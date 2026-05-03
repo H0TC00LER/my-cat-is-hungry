@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://qo0k8qgbwp7g" path="res://scenes/player/player.gd" id="1_8afob"]
 [ext_resource type="Script" uid="uid://dsueu1yatebgf" path="res://scenes/player/head.gd" id="2_dovo2"]
 [ext_resource type="Texture2D" uid="uid://x7l70csfx0ka" path="res://assets/hand.png" id="3_gmlin"]
+[ext_resource type="AudioStream" uid="uid://qpeoa0g7brje" path="res://assets/sounds/шаг 1.wav" id="3_p47bc"]
 [ext_resource type="Texture2D" uid="uid://b6i6eum1r2j4t" path="res://assets/scan.png" id="4_lvxji"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x7p2l"]
@@ -33,6 +34,9 @@ collide_with_areas = true
 [node name="Hand" type="Node3D" parent="Head" unique_id=234565224]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2939775, -0.15891814, -0.44799888)
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Head" unique_id=1217446810]
+stream = ExtResource("3_p47bc")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1413222629]
 
 [node name="DebugLabel" type="Label" parent="CanvasLayer" unique_id=901056692]
@@ -55,6 +59,7 @@ offset_right = 41.0
 offset_bottom = 59.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_gmlin")
 expand_mode = 1
 
@@ -71,5 +76,6 @@ offset_right = 54.0
 offset_bottom = 57.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_lvxji")
 expand_mode = 1

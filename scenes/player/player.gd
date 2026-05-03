@@ -76,7 +76,7 @@ func _physics_process(delta: float) -> void:
 	
 	if interaction_raycast.is_colliding():
 		var collider = interaction_raycast.get_collider()
-		if collider.has_method("interact"):
+		if collider and collider.has_method("interact"):
 			hand_cursor.visible = true
 		else:
 			hand_cursor.visible = false
@@ -148,14 +148,6 @@ func check_interaction():
 		current_item.scan(collider)
 	elif current_item is Scanner and collider is Cat:
 		current_item.scan_cat(collider)
-	elif collider and collider is Item:
-		if EventManager.get_current_event() == "wash_hands_quest":
-			DialogManager.show_dialog(["Сначала умыться."])
-			return
-		elif EventManager.get_current_event() == "go_to_sleep_quest":
-			DialogManager.show_dialog(["На сегодня хватит. Пора спать."])
-			return
-		collider.interact(self)
 	elif collider and collider.has_method("interact"):
 		print(collider)
 		collider.interact(self)

@@ -110,5 +110,30 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_10dm6")
 theme_override_font_sizes/font_size = 77
-text = "9
+text = "0
+"
+
+[node name="Clear" type="Button" parent="GridContainer" unique_id=1604127567]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_10dm6")
+theme_override_font_sizes/font_size = 18
+text = "Очистить"
+
+[node name="Exit" type="Button" parent="GridContainer" unique_id=818042343]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_10dm6")
+theme_override_font_sizes/font_size = 24
+text = "выйти"
+
+[node name="Enter" type="Button" parent="GridContainer" unique_id=1835437836]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_10dm6")
+theme_override_font_sizes/font_size = 26
+text = "Ввод
 "

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://de1trpfhdkyqq"]
+
+[ext_resource type="Script" uid="uid://cwv6gtyn27xew" path="res://scenes/interactables/trapdoor.gd" id="1_8m58g"]
+[ext_resource type="PackedScene" uid="uid://ct3mjr4iwtfmy" path="res://assets/props/trapdoor/trapdoor.glb" id="1_c2qvf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8m58g"]
+size = Vector3(2.5021973, 0.3696289, 1.8320313)
+
+[node name="Trapdoor" type="Area3D" unique_id=156554876]
+script = ExtResource("1_8m58g")
+
+[node name="trapdoor" parent="." unique_id=1588215429 instance=ExtResource("1_c2qvf")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1939883780]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012329102, -0.061279297, -0.009765625)
+shape = SubResource("BoxShape3D_8m58g")

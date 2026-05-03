@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://fsxhht8s61n5"
+path="res://.godot/imported/муся мурч.wav-e5f1f66fd315162c2aedea0ccbaeb2fc.sample"
+
+[deps]
+
+source_file="res://assets/sounds/муся мурч.wav"
+dest_files=["res://.godot/imported/муся мурч.wav-e5f1f66fd315162c2aedea0ccbaeb2fc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

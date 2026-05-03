@@ -7,6 +7,13 @@ var esotericity: int = 0
 
 func interact(player: Player) -> void:
 	if player.current_item is Food:
+		if EventManager.get_current_event() == "wash_hands_quest":
+			DialogManager.show_dialog(["Сначала умыться."])
+			return
+		elif EventManager.get_current_event() == "go_to_sleep_quest":
+			DialogManager.show_dialog(["На сегодня хватит. Пора спать."])
+			return
+		
 		var food: Food = player.current_item
 		radioactivity += food.delta_radioactivity
 		holiness += food.delta_holiness

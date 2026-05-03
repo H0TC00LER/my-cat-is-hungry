@@ -2,7 +2,7 @@ class_name Head
 extends Node3D
 
 @onready var camera: Camera3D = $Camera3D
-#@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
+@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 enum State {
 	Walk,
@@ -64,8 +64,8 @@ func apply_camera_bob():
 func bob(speed: float, intensity: float, delta: float) -> void:
 	camera_bob_time += delta * speed
 	
-	#if abs(sin(camera_bob_time)) > 0.997:
-		#audio_stream_player_3d.play()
+	if abs(sin(camera_bob_time)) > 0.997:
+		audio_stream_player_3d.play()
 	
 	var bob_offset = Vector3(
 		sin(camera_bob_time) * 0.02 * intensity,

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cvl3m802qei78"]
+
+[ext_resource type="Script" uid="uid://c75b5edydhgw" path="res://scenes/interactables/planks.gd" id="1_qf0se"]
+[ext_resource type="PackedScene" uid="uid://dehijr4hpd800" path="res://assets/props/planks/planks.glb" id="1_r63ux"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qf0se"]
+size = Vector3(5.680908, 4.4953613, 1.2680664)
+
+[node name="Planks" type="Area3D" unique_id=114483954]
+script = ExtResource("1_qf0se")
+
+[node name="planks" parent="." unique_id=794485453 instance=ExtResource("1_r63ux")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1850997796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014038086, 0.54382324, -0.1340332)
+shape = SubResource("BoxShape3D_qf0se")
